@@ -72,7 +72,7 @@ export default function CommodityMoney() {
           className="combeam"
           style={{
             position: "absolute",
-            height: `${height}%`,
+            height: "80%",
             width: "auto",
             left: -50,
             display: "flex",
@@ -113,7 +113,7 @@ export default function CommodityMoney() {
           style={{
             zIndex: 1,
             position: "absolute",
-            height: `${height}%`,
+            height: "80%",
             width: "auto",
             right: -35,
             bottom: 0,

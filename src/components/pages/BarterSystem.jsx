@@ -16,9 +16,9 @@ export default function BarterSystem() {
       const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
       if (isMobile) {
-        setHeight(width * 0.25); 
+        setHeight(width * 0.15); 
       } else {
-        setHeight(width * 0.18); 
+        setHeight(width * 0.10); 
       }
     };
 
@@ -70,7 +70,7 @@ export default function BarterSystem() {
         className="barbeam"
           style={{
             position: "absolute",
-            height: `${height}%`,
+            height: "80%",
             width: "auto",
             left: 0,
             display: "flex",
@@ -110,7 +110,7 @@ export default function BarterSystem() {
           style={{
             zIndex: 2,
             position: "absolute",
-            height: `${height}%`,
+            height: "80%",
             width: "auto",
             right: 0,
             bottom: 0,
