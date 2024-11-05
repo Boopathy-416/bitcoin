@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, Component } from "react";
-import "../customcursor/CustomCursor.css";
+import "../customise/customcursor.css";
 
 const FadeImage = ({ src, text, component, alt, direction = "right" }) => {
   const imageRef = useRef(null);

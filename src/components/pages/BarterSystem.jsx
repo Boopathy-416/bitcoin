@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import "../Stylepages/BarterSystem.css";
-import FadeImage from "../customcursor/FadeImage";
+import FadeImage from "../customise/FadeImage";
 import BPLEFT from "/public/assets/BPLEFT.webp";
 import BARTERLEFT from "/public/assets/BARTERLEFT.webp";
 import BPRFT from "/public/assets/BPRFT.webp";

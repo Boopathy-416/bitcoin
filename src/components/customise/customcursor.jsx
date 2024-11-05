@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./customcursor.css";
 
 
-const CustomCursor = () => {
+const customcursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const updateCursorPosition = (e) => {
@@ -29,4 +29,4 @@ const CustomCursor = () => {
   );
 };
 
-export default CustomCursor;
+export default customcursor;

@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import FadeImage from "../customcursor/FadeImage";
+import FadeImage from "../customise/FadeImage";
 
 import bitcoinLeft from "/public/assets/bitcoinbeamLft.webp";
 import bitcoinLFTman from "/public/assets/Group 208.webp";

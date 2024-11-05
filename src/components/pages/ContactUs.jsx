@@ -1,6 +1,6 @@
 import React from "react";
 import "../Stylepages/contact.css";
-import FadeImage from "../customcursor/FadeImage";
+import FadeImage from "../customise/FadeImage";
 
 export default function ContactUs() {
   return (

@@ -10,8 +10,8 @@ import GoldStandard from "./components/pages/GoldStandard";
 import UsDollars from "./components/pages/UsDollars";
 import Bitcoin from "./components/pages/Bitcoin";
 import ContactUs from "./components/pages/ContactUs";
-import CustomCursor from "./components/customcursor/CustomCursor";
-import Preloader from "./components/customcursor/Preloader";
+
+import Preloader from "./components/customise/Preloader";
 
 // Importing background image
 import bgMotion from "/public/assets/bg motion.webp";
@@ -117,7 +117,7 @@ function App() {
       {/* Show Preloader until images are loaded */}
       {isLoaded && (
         <>
-          <CustomCursor />
+          {/* <customcursor /> */}
 
           <div
             style={{

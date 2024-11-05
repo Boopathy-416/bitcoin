@@ -1,9 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
 import "../Stylepages/Home.css";
-import FadeImage from "../customcursor/FadeImage";
-import leftArchHome from "/public/assets/leftarchome.webp";
+import FadeImage from "../customise/FadeImage";
+// import leftArchHome from "/public/assets/leftarchome.webp";
 import homeDown from "/public/assets/homedown.webp";
-import rightArchHome from "/public/assets/rightarchome.webp";
+// import rightArchHome from "/public/assets/rightarchome.webp";
 import buttonScroll from "/public/assets/bg buttonscroll.png";
 
 const Home = ({ goToSection, goToContact  }) => {
@@ -64,7 +64,7 @@ const Home = ({ goToSection, goToContact  }) => {
 
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen flex flex-col">
-      <header className="p-4 flex justify-between items-center">
+      <header className="p-4 flex justify-between items-center z-1">
         <h2 className="font-bold text-white sm:text-xl  ">THEBITCOIN.COM</h2>
 
         <a

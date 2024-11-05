@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import FadeImage from "../customcursor/FadeImage";
+import FadeImage from "../customise/FadeImage";
 
 // Importing images
 import usdollarsLFT from "/public/assets/usdollarsLFT.webp";
