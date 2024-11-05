@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
+@font-face {
+  font-family: Fellix;
+  src: url("/public/assets/fonts/Fellix-Regular.ttf");
+}
+
+.title {
+  z-index: 999;
+  margin-top: 5px;
+  font-family: Fellix;
+  font-weight: 300;
+  color: rgba(255, 255, 255);
+  margin-top: 12%;
+  font-size: 28px;
+  text-align: center;
+  width: 50%;
+  justify-content: center;
+}
+
+.i {
+  font-family: Exo;
+  cursor: pointer;
+  padding: 20px;
+  font-weight: 500;
+  background: linear-gradient(#ff873c, #0e0e0e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes arrow-up {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+b {
+  letter-spacing: 0.7px;
+  background: linear-gradient(#3ec6f6 100%, #0e0e0e 100%);
+  font-weight: 300;
+  font-size: 28px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+tt {
+  letter-spacing: 0.7px;
+  font-weight: 300;
+  font-size: 28px;
+  background: linear-gradient(#ff873c 100%, #0e0e0e 100%);
+  font-family: EXO;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  p,
+  tt,
+  b {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .combeam {
+    width: auto !important;
+    left: -50px !important;
+    height: 450px !important;
+  }
+
+  .comsbeam {
+    width: auto !important;
+    right: -50px !important;
+    height: 450px !important;
+  }
+
+  .barbeam {
+    width: auto !important;
+    left: 0px !important;
+    height: 550px !important;
+  }
+
+  .barsbeam {
+    width: auto !important;
+    right: 0px !important;
+    height: 550px !important;
+  }
+
+  .prebeam {
+    width: auto !important;
+    left: -80px !important;
+    height: 500px !important;
+  }
+
+  .presbeam {
+    width: auto !important;
+    right: -80px !important;
+    height: 500px !important;
+  }
+
+  /* special man  */
+
+  .barleft {
+    width: 320px !important;
+    left: -100px !important;
+    height: 28vh !important;
+  }
+  .barright {
+    width: 320px !important;
+    right: -105px !important;
+    height: 28vh !important;
+  }
+
+  .comleft {
+    width: 310px !important;
+    left: -100px !important;
+    height: 30vh !important;
+  }
+
+  .comright {
+    width: 320px !important;
+    right: -120px !important;
+    height: 30vh !important;
+  }
+
+  .conleft {
+    width: 320px !important;
+    left: -100px !important;
+    height: 30vh !important;
+  }
+  .conright {
+    width: 300px !important;
+    right: -100px !important;
+    height: 30vh !important;
+  }
+
+  .popleft {
+    width: 320px !important;
+    height: 25vh !important;
+    left: -110px !important;
+  }
+
+  .popright {
+    width: 321px !important;
+    height: 26vh !important;
+    right: -110px !important;
+  }
+  .leftman {
+    width: 310px !important;
+    left: -105px;
+    height: 30vh;
+  }
+  .rightman {
+    width: 310px !important;
+    right: -115px !important;
+    height: 30vh !important;
+  }
+  .preman {
+    width: 320px !important;
+    left: -100px !important;
+    height: 30vh !important;
+  }
+  .prerman {
+    width: 320px !important;
+    height: 30vh !important;
+    right: -122px !important;
+  }
+  .usleft {
+    width: 312px !important;
+    height: 25vh !important;
+    left: -100px !important;
+  }
+  .usright {
+    width: 310px !important;
+    height: 25vh !important;
+    right: -100px !important;
+  }
+
+  .bitleft {
+    width: 310px !important;
+    height: 25vh !important;
+    left: -90px !important;
+  }
+
+  .bitright {
+    width: 310px !important;
+    height: 25vh !important;
+    right: -90px !important;
+  }
+
+  .homeleft {
+    width: 40% !important;
+  }
+  .homeright {
+    width: 40% !important;
+  }
+
+  .goldman{
+    width: 400px !important;
+    left: -160px !important;
+  }
+  .goldrman{
+    width: 370px !important;
+    right: -180px !important;
+  }
+
+
+  .down {
+    width: 1100px !important;
+  }
+
+  .i {
+    margin-top: 100px !important;
+    padding: 15px !important;
+  }
+  .title{
+    padding-top: 60px;
+    width: 100%;
+  }
+  
+  .particle{
+    width: 100% !important;
+  }
+}
