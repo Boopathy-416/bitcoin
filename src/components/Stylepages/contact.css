@@ -12,14 +12,13 @@ a {
 .go {
   z-index: 12;
   font-family: Fellix;
-  display: flex;
   position: absolute;
-  align-items: center;
-  justify-content: center;
-  bottom: 20px;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
-  left: 47%;
 }
+
 form {
   font-family: Exo;
   letter-spacing: 1px;

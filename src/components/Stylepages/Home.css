@@ -68,6 +68,10 @@ tt {
 }
 
 @media (max-width: 480px) {
+
+  .homelbeam{
+    width: 30% !important;
+  }
   .barbeam {
     width: 50% !important;
   }
@@ -211,14 +215,17 @@ tt {
     left: -500px !important;
   }
 
+  .downs{
+    width: 1200px !important;
+    height: auto;
+  }
+
   .contact {
     top: 18% !important;
   }
 
   .go {
-    text-align: center !important;
-    left: 35% !important;
-    bottom: 30px !important;
+    bottom: 80px !important;
   }
 
   .i {

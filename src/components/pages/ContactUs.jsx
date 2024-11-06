@@ -15,7 +15,7 @@ export default function ContactUs() {
           Contact Us
         </a>
 
-        <a href="/" className="sm:hidden">
+        <a href="/" className="sm:hidden z-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -109,7 +109,7 @@ export default function ContactUs() {
             width: "auto",
             bottom: 0,
             zIndex: 2,
-            opacity: 0.7,
+            opacity: 0.6,
           }}
         >
           {" "}
@@ -117,8 +117,8 @@ export default function ContactUs() {
             src="/public/assets/contactdown.webp"
             className="img-fluid"
             alt="Responsive image"
-            direction="up"
             style={{ width: "100%", height: "100%", objectFit: "contain" }}
+            direction="up"
           />
         </div>
         <a

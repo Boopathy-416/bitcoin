@@ -1,9 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
 import "../Stylepages/Home.css";
 import FadeImage from "../customise/FadeImage";
-// import leftArchHome from "/public/assets/leftarchome.webp";
+import leftArchHome from "/public/assets/leftarchome.webp";
 import homeDown from "/public/assets/homedown.webp";
-// import rightArchHome from "/public/assets/rightarchome.webp";
+import rightArchHome from "/public/assets/rightarchome.webp";
 import buttonScroll from "/public/assets/bg buttonscroll.png";
 
 const Home = ({ goToSection, goToContact }) => {
@@ -53,12 +53,12 @@ const Home = ({ goToSection, goToContact }) => {
     if (isMobile) {
       goToSection();
     }
-    goToSection(); // Trigger the goToSection function for both mobile and desktop
+    goToSection();
   };
 
   // fucntion to contact Us
   const gocontact = () => {
-    goToContact(); // Trigger goToContact to navigate to Contact section
+    goToContact(); 
   };
 
   return (
@@ -128,21 +128,21 @@ const Home = ({ goToSection, goToContact }) => {
       <div
         style={{
           position: "relative",
-          height: "100svh",
+          height: "100vh",
           width: "100vw",
           zIndex: 2,
         }}
       >
-        {/* <div
-          className="homeleft"
+        <div
+          className="homebeam"
           style={{
             position: "absolute",
             height: `${height}%`, // Dynamically set height
-            width: "12%",
+            width: "auto",
             left: 0,
             display: "flex",
             opacity: 1,
-            opacity: 0.5,
+            opacity: 0.6,
             bottom: -20,
           }}
         >
@@ -153,12 +153,12 @@ const Home = ({ goToSection, goToContact }) => {
             direction="right"
             style={{ height: "100%", objectFit: "contain" }}
           />
-        </div> */}
+        </div>
 
         <div
-          className="down"
+          className="downs"
           ref={boxRef}
-          style={{ position: "absolute", bottom: 0, zIndex: 2 }}
+          style={{ position: "absolute", bottom: 0, zIndex: 2, width:"auto", }}
         >
           <img
             src={homeDown}
@@ -168,15 +168,15 @@ const Home = ({ goToSection, goToContact }) => {
           />
         </div>
 
-        {/* <div
-          className="homeright"
+         <div
+         className="homebeam"
           style={{
             zIndex: 1,
             position: "absolute",
             height: `${height}%`, // Dynamically set height
-            width: "11.5%",
+            width: "auto",
             right: 0,
-            opacity: 0.5,
+            opacity: 0.6,
             bottom: -27,
           }}
         >
@@ -187,7 +187,7 @@ const Home = ({ goToSection, goToContact }) => {
             direction="left"
             style={{ width: "100%", height: "100%", objectFit: "contain" }}
           />
-        </div> */}
+        </div> 
       </div>
     </div>
   );
