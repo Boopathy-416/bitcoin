@@ -6,10 +6,10 @@ import homeDown from "/public/assets/homedown.webp";
 // import rightArchHome from "/public/assets/rightarchome.webp";
 import buttonScroll from "/public/assets/bg buttonscroll.png";
 
-const Home = ({ goToSection, goToContact  }) => {
+const Home = ({ goToSection, goToContact }) => {
   const boxRef = useRef(null);
   const [height, setHeight] = useState(10);
-  const [isHovered, setIsHovered] = useState(false); 
+  const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false); // State to detect mobile view
 
   useEffect(() => {
@@ -51,16 +51,15 @@ const Home = ({ goToSection, goToContact  }) => {
   // Function to handle click for mobile
   const handleClick = () => {
     if (isMobile) {
-  goToSection();
+      goToSection();
     }
     goToSection(); // Trigger the goToSection function for both mobile and desktop
   };
 
-// fucntion to contact Us
+  // fucntion to contact Us
   const gocontact = () => {
     goToContact(); // Trigger goToContact to navigate to Contact section
   };
-
 
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen flex flex-col">
@@ -68,14 +67,13 @@ const Home = ({ goToSection, goToContact  }) => {
         <h2 className="font-bold text-white sm:text-xl  ">THEBITCOIN.COM</h2>
 
         <a
-          onClick={gocontact}  
+          onClick={gocontact}
           className="hidden sm:inline-block font-bold z-1 text-white cursor-pointer"
         >
           Contact Us
         </a>
 
-        <a 
-         className="sm:hidden ">
+        <a className="sm:hidden ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -83,7 +81,7 @@ const Home = ({ goToSection, goToContact  }) => {
             strokeWidth="2"
             stroke="currentColor"
             className="w-6 h-6  z-1 text-white cursor-pointer"
-            onClick={gocontact} 
+            onClick={gocontact}
           >
             <path
               strokeLinecap="round"
@@ -99,20 +97,21 @@ const Home = ({ goToSection, goToContact  }) => {
           text={
             <p className="title z-0 ">
               <b>ROME</b> was Not Built in a day, But history can be made
-              overnight.
-          
-              It took <b>11,000</b> years of trade before <tt>BITCOIN</tt> was
-              invented.
-             
-              It took us just <tt>15 YEARS</tt> to embark on creating history.
+              overnight. It took <b>11,000</b> years of trade before{" "}
+              <tt>BITCOIN</tt> was invented. It took us just <tt>15 YEARS</tt>{" "}
+              to embark on creating history.
             </p>
           }
           direction="up"
         />
-        <p className="i z-3"   onClick={handleClick} 
+        <p
+          className="i z-3"
+          onClick={handleClick}
           onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave} 
-        >  SCROLL
+          onMouseLeave={handleMouseLeave}
+        >
+          {" "}
+          SCROLL
         </p>
         <img
           src={buttonScroll}

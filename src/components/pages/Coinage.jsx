@@ -29,7 +29,7 @@ export default function Coinage() {
     return () => {
       window.removeEventListener("resize", updateHeight);
     };
-  }, []); 
+  }, []);
 
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max  text-white flex flex-col">
@@ -39,20 +39,22 @@ export default function Coinage() {
           direction="up"
         />
 
-        <FadeImage text={ <h1 className="head m-0 p-2">COINAGE</h1>} direction="up" />
+        <FadeImage
+          text={<h1 className="head m-0 p-2">COINAGE</h1>}
+          direction="up"
+        />
 
         <FadeImage
           text={
             <p className="particle m-0 p-0">
               Ancient Lydians, by stamping a seal on a piece of metal started
-              the age of coins.
-              This procedure did nothing to modify the intrinsic value of the
-              metal, but it simplified the exchange of bullion for anyone willing to
-              accept the stamp’s guarantee.
+              the age of coins. This procedure did nothing to modify the
+              intrinsic value of the metal, but it simplified the exchange of
+              bullion for anyone willing to accept the stamp’s guarantee.
             </p>
           }
           direction="up"
-        />      
+        />
       </main>
       <div
         style={{
@@ -62,20 +64,19 @@ export default function Coinage() {
           zIndex: 1,
         }}
       >
-        
         <div
+          className="coinbeam"
           style={{
             position: "absolute",
             height: `${height}%`,
             width: "auto",
-            left: 0,
+            left: -10,
             display: "flex",
             float: "left",
             bottom: 0,
-            opacity:1
+            opacity: 1,
           }}
         >
-
           <FadeImage
             src={coinageLFT}
             className="img-fluid"
@@ -83,14 +84,13 @@ export default function Coinage() {
             direction="right"
             style={{ height: "100%", width: "100%", objectFit: "contain" }}
           />
-
         </div>
         <div
-        className="conleft"
+          className="conleft"
           style={{
             position: "absolute",
-            width: "39.5%",
-            left:-20,
+            width: "40vw",
+            left: -20,
             bottom: 0,
           }}
         >
@@ -104,14 +104,15 @@ export default function Coinage() {
         </div>
 
         <div
+          className="coinbeam"
           style={{
             zIndex: 1,
             position: "absolute",
             height: `${height}%`,
             width: "auto",
-            right: 0,
+            right: -10,
             bottom: 0,
-            opacity:1
+            opacity: 1,
           }}
         >
           <FadeImage
@@ -123,13 +124,13 @@ export default function Coinage() {
           />
         </div>
         <div
-        className="conright"
-            ref={boxRef}
-            style={{
+          className="conright"
+          ref={boxRef}
+          style={{
             zIndex: 1,
             position: "absolute",
             bottom: 0,
-            width: "35%",
+            width: "35vw",
             right: 0,
           }}
         >

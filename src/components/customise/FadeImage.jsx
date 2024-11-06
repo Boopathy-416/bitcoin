@@ -48,7 +48,7 @@ const FadeImage = ({ src, text, component, alt, direction = "right" }) => {
             justifyContent: "center",
             display: "flex",
             alignItems: "center",
-            color:"white"
+            color: "white",
           }}
         >
           {text}

@@ -16,7 +16,7 @@ export default function CommodityMoney() {
       const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
 
       if (isMobile) {
-        setHeight(width * 0.185); // For mobile screens
+        setHeight(width * 0.165); // For mobile screens
       } else {
         setHeight(width * 0.18); // For larger screens
       }
@@ -50,10 +50,9 @@ export default function CommodityMoney() {
           text={
             <p className="particle m-0 p-0">
               Commodity money developed when societies began using objects with
-              
               intrinsic value as currency.Ancient civilizations like the
-              Sumerians and Egyptians used items like grain, cattle,
-              honey or animal pelts.
+              Sumerians and Egyptians used items like grain, cattle, honey or
+              animal pelts.
             </p>
           }
           direction="up"
@@ -72,7 +71,7 @@ export default function CommodityMoney() {
           className="combeam"
           style={{
             position: "absolute",
-            height: "80%",
+            height: `${height}%`,
             width: "auto",
             left: -50,
             display: "flex",
@@ -93,7 +92,7 @@ export default function CommodityMoney() {
           className="comleft"
           style={{
             position: "absolute",
-            width: "39.5vw",
+            width: "41vw",
             height: "auto",
             left: -60,
             bottom: 0,
@@ -109,11 +108,11 @@ export default function CommodityMoney() {
         </div>
 
         <div
-        className="comsbeam"
+          className="combeam"
           style={{
             zIndex: 1,
             position: "absolute",
-            height: "80%",
+            height: `${height}%`,
             width: "auto",
             right: -35,
             bottom: 0,
@@ -136,7 +135,7 @@ export default function CommodityMoney() {
             zIndex: 2,
             position: "absolute",
             bottom: 0,
-            width: "35vw",
+            width: "36vw",
             height: "auto",
             right: 0,
           }}

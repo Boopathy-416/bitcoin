@@ -22,7 +22,7 @@ export default function ContactUs() {
             viewBox="0 0 24 24"
             strokeWidth="2"
             stroke="currentColor"
-            className="w-6 h-6"
+            className="w-6 h-6 text-white"
           >
             <path
               strokeLinecap="round"
@@ -41,9 +41,9 @@ export default function ContactUs() {
           zIndex: 1,
         }}
       >
-        <div className="flex-grow absolute z-3  flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center justify-center w-full ">
+        <div className="flex-grow absolute z-3 contact  flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center justify-center w-full ">
           <div className="text-base sm:text-lg lg:text-xl max-w-xl sm:max-w-1xl mb-8 sm:mb-12">
-            <p className="years text-white">2020</p>
+            <p className="years text-white mb-2">2020</p>
             <FadeImage
               text={
                 <h3 className="ok mb-0">
@@ -53,111 +53,56 @@ export default function ContactUs() {
               direction="up"
             />
             <FadeImage
-              text={
-                <p
-                  className="particle text-white"
-                  // style={{ padding: "14px", marginTop: "-45px" }}
-                >
-                 
-                  COMING SOON TO YOUR CITY
-                </p>
-              }
-              component={<form action="#">
-                <div className="relative  flex items-center">
-                  <input
-                    type="text"
-                    id="name-input"
-                    required
-                    placeholder="Enter your Name"
-                    className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-full focus:outline-none"
-                  />
-                </div>
-                <div className="relative mt-6 flex items-center">
-                  <input
-                    type="email"
-                    id="email-input"
-                    required
-                    placeholder="Enter your Email"
-                    className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01  rounded-full focus:outline-none"
-                  />
-                </div>
-
-                <div className="relative mt-6 flex items-center">
-                  <input
-                    type="text"
-                    id="name-input"
-                    required
-                    placeholder="Enter your Location"
-                    className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01  rounded-full focus:outline-none"
-                  />
-                </div>
-
-                <div className="flex justify-center mt-8">
-                  <button className="w-full py-2 bg-dark text-white  font-bold rounded-full hover:bg-gray-300 focus:outline-none">
-                    Submit
-                  </button>
-                </div>
-
-                <a
-                  id="contact"
-                  href="/"
-                  class="text-sm text-blue-500 hover:text-blue-700 ml-1"
-                >
-                  Back to Home
-                </a>
-              </form>}
+              text={<p className=" mb-4">Coming soon to your city</p>}
               direction="up"
             />
-          
-              {/* <form action="#">
-                <div className="relative  flex items-center">
-                  <input
-                    type="text"
-                    id="name-input"
-                    required
-                    placeholder="Enter your Name"
-                    className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-full focus:outline-none"
-                  />
-                </div>
-                <div className="relative mt-6 flex items-center">
-                  <input
-                    type="email"
-                    id="email-input"
-                    required
-                    placeholder="Enter your Email"
-                    className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01  rounded-full focus:outline-none"
-                  />
-                </div>
 
-                <div className="relative mt-6 flex items-center">
-                  <input
-                    type="text"
-                    id="name-input"
-                    required
-                    placeholder="Enter your Location"
-                    className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01  rounded-full focus:outline-none"
-                  />
-                </div>
+            <FadeImage
+              component={
+                <form action="#">
+                  <div className="relative  flex items-center">
+                    <input
+                      type="text"
+                      id="name-input"
+                      required
+                      placeholder="Enter your Name"
+                      className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-full focus:outline-none"
+                    />
+                  </div>
+                  <div className="relative mt-6 flex items-center">
+                    <input
+                      type="email"
+                      id="email-input"
+                      required
+                      placeholder="Enter your Email"
+                      className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01  rounded-full focus:outline-none"
+                    />
+                  </div>
 
-                <div className="flex justify-center mt-8">
-                  <button className="w-full py-2 bg-dark text-white  font-bold rounded-full hover:bg-gray-300 focus:outline-none">
-                    Submit
-                  </button>
-                </div>
+                  <div className="relative mt-6 flex items-center">
+                    <input
+                      type="text"
+                      id="name-input"
+                      required
+                      placeholder="Enter your Location"
+                      className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01  rounded-full focus:outline-none"
+                    />
+                  </div>
 
-                <a
-                  id="contact"
-                  href="/"
-                  class="text-sm text-blue-500 hover:text-blue-700 ml-1"
-                >
-                  Back to Home
-                </a>
-              </form>
-    */}
+                  <div className="flex justify-center mt-8">
+                    <button className="w-full py-2 bg-dark text-white  font-bold rounded-full hover:bg-gray-300 focus:outline-none">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              }
+              direction="up"
+            />
           </div>
         </div>
 
         <div
+          className="down"
           style={{
             position: "absolute",
             height: "auto",
@@ -176,6 +121,13 @@ export default function ContactUs() {
             style={{ width: "100%", height: "100%", objectFit: "contain" }}
           />
         </div>
+        <a
+          id="contact"
+          href="/"
+          class="go text-sm text-orange-500 hover:text-blue-400 ml-1   "
+        >
+          Back to Home
+        </a>
       </div>
     </section>
   );

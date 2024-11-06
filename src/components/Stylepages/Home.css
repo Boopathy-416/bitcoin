@@ -68,88 +68,82 @@ tt {
 }
 
 @media (max-width: 480px) {
-  .combeam {
-    width: auto !important;
-    left: -50px !important;
-    height: 450px !important;
-  }
-
-  .comsbeam {
-    width: auto !important;
-    right: -50px !important;
-    height: 450px !important;
-  }
-
   .barbeam {
-    width: auto !important;
-    left: 0px !important;
-    height: 550px !important;
+    width: 50% !important;
   }
 
-  .barsbeam {
-    width: auto !important;
-    right: 0px !important;
-    height: 550px !important;
+  .goldbeam {
+    width: 50% !important;
+  }
+  .paperbeam {
+    width: 50% !important;
+  }
+
+  .coinbeam {
+    width: 50% !important;
+  }
+
+  .combeam {
+    width: 50% !important;
   }
 
   .prebeam {
-    width: auto !important;
-    left: -80px !important;
-    height: 500px !important;
+    width: 55% !important;
   }
 
-  .presbeam {
-    width: auto !important;
-    right: -80px !important;
-    height: 500px !important;
+  .usbeam {
+    width: 45% !important;
+  }
+  .bitbeam {
+    width: 60% !important;
   }
 
   /* special man  */
 
   .barleft {
-    width: 320px !important;
-    left: -100px !important;
-    height: 28vh !important;
+    width: 420px !important;
+    left: -175px !important;
+    height: auto !important;
   }
   .barright {
-    width: 320px !important;
-    right: -105px !important;
-    height: 28vh !important;
+    width: 380px !important;
+    right: -175px !important;
+    height: auto !important;
   }
 
   .comleft {
-    width: 310px !important;
-    left: -100px !important;
-    height: 30vh !important;
+    width: 420px !important;
+    left: -180px !important;
+    height: auto !important;
   }
 
   .comright {
-    width: 320px !important;
-    right: -120px !important;
-    height: 30vh !important;
+    width: 380px !important;
+    right: -180px !important;
+    height: auto !important;
   }
 
   .conleft {
-    width: 320px !important;
-    left: -100px !important;
-    height: 30vh !important;
+    width: 420px !important;
+    left: -180px !important;
+    height: auto !important;
   }
   .conright {
-    width: 300px !important;
-    right: -100px !important;
-    height: 30vh !important;
+    width: 375px !important;
+    right: -180px !important;
+    height: auto !important;
   }
 
   .popleft {
-    width: 320px !important;
-    height: 25vh !important;
-    left: -110px !important;
+    width: 420px !important;
+    height: auto !important;
+    left: -180px !important;
   }
 
   .popright {
-    width: 321px !important;
-    height: 26vh !important;
-    right: -110px !important;
+    width: 380px !important;
+    height: auto !important;
+    right: -180px !important;
   }
   .leftman {
     width: 310px !important;
@@ -162,36 +156,37 @@ tt {
     height: 30vh !important;
   }
   .preman {
-    width: 320px !important;
-    left: -100px !important;
-    height: 30vh !important;
+    width: 100dvw !important;
+    left: -180px !important;
+    height: auto !important;
+    /* bottom: 10px !important; */
   }
   .prerman {
-    width: 320px !important;
-    height: 30vh !important;
-    right: -122px !important;
+    width: 95dvw !important;
+    height: auto !important;
+    right: -182px !important;
   }
   .usleft {
-    width: 312px !important;
-    height: 25vh !important;
-    left: -100px !important;
+    width: 424px !important;
+    height: auto !important;
+    left: -190px !important;
   }
   .usright {
-    width: 310px !important;
-    height: 25vh !important;
-    right: -100px !important;
+    width: 380px !important;
+    height: auto !important;
+    right: -180px !important;
   }
 
   .bitleft {
-    width: 310px !important;
-    height: 25vh !important;
-    left: -90px !important;
+    width: 400px !important;
+    height: auto !important;
+    left: -190px !important;
   }
 
   .bitright {
-    width: 310px !important;
-    height: 25vh !important;
-    right: -90px !important;
+    width: 380px !important;
+    height: auto !important;
+    right: -150px !important;
   }
 
   .homeleft {
@@ -201,30 +196,41 @@ tt {
     width: 40% !important;
   }
 
-  .goldman{
-    width: 400px !important;
-    left: -160px !important;
+  .goldman {
+    width: 420px !important;
+    left: -180px !important;
   }
-  .goldrman{
-    width: 370px !important;
-    right: -180px !important;
+  .goldrman {
+    width: 380px !important;
+    right: -190px !important;
   }
-
 
   .down {
-    width: 1100px !important;
+    width: 1200px !important;
+    height: auto !important;
+    left: -500px !important;
+  }
+
+  .contact {
+    top: 18% !important;
+  }
+
+  .go {
+    text-align: center !important;
+    left: 35% !important;
+    bottom: 30px !important;
   }
 
   .i {
     margin-top: 100px !important;
     padding: 15px !important;
   }
-  .title{
+  .title {
     padding-top: 60px;
     width: 100%;
   }
-  
-  .particle{
+
+  .particle {
     width: 100% !important;
   }
 }

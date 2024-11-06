@@ -24,7 +24,10 @@ function App() {
   const [startTouchY, setStartTouchY] = useState(null);
 
   const sections = [
-    <Home  goToSection={() => setCurrentSection(1)} goToContact={() => setCurrentSection(sections.length - 1)} />,
+    <Home
+      goToSection={() => setCurrentSection(1)}
+      goToContact={() => setCurrentSection(sections.length - 1)}
+    />,
     <BarterSystem />,
     <CommodityMoney />,
     <PreciousMetals />,

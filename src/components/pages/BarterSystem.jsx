@@ -13,12 +13,12 @@ export default function BarterSystem() {
   useEffect(() => {
     const updateHeight = () => {
       const width = boxRef.current.offsetWidth;
-      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+      const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
 
       if (isMobile) {
-        setHeight(width * 0.15); 
+        setHeight(width * 0.15); // For mobile screens
       } else {
-        setHeight(width * 0.10); 
+        setHeight(width * 0.15); // For larger screens
       }
     };
 
@@ -31,9 +31,7 @@ export default function BarterSystem() {
   }, []);
 
   return (
-    <div
-      className="relative min-h-screen min-w-screen max-h-screen min-w-max m-0 p-0 text-white flex flex-col"
-    >
+    <div className="relative min-h-screen min-w-screen max-h-screen min-w-max m-0 p-0 text-white flex flex-col">
       <main className="absolute flex-grow flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center w-full ">
         <FadeImage
           text={<div className="year pt-4">c.670 BCE</div>}
@@ -50,9 +48,9 @@ export default function BarterSystem() {
         <FadeImage
           text={
             <p className="particle m-0 p-0">
-              The earliest form of trade, ancient Mesopotamians and Egyptians 
+              The earliest form of trade, ancient Mesopotamians and Egyptians
               exchanged goods and services directly, such as trading livestock
-               for grains or labor for tools.
+              for grains or labor for tools.
             </p>
           }
           direction="up"
@@ -61,16 +59,16 @@ export default function BarterSystem() {
 
       <div
         style={{
-          position: "relative",
+          position: "absolute",
           height: "100vh",
           width: "100%",
         }}
       >
         <div
-        className="barbeam"
+          className="barbeam"
           style={{
             position: "absolute",
-            height: "80%",
+            height: `${height}%`,
             width: "auto",
             left: 0,
             display: "flex",
@@ -91,7 +89,7 @@ export default function BarterSystem() {
           className="barleft"
           style={{
             position: "absolute",
-            width: "38vw" ,
+            width: "43vw",
             height: "auto",
             bottom: 0,
           }}
@@ -106,11 +104,11 @@ export default function BarterSystem() {
         </div>
 
         <div
-           className="barsbeam"
+          className="barbeam"
           style={{
             zIndex: 2,
             position: "absolute",
-            height: "80%",
+            height: `${height}%`,
             width: "auto",
             right: 0,
             bottom: 0,
@@ -122,17 +120,18 @@ export default function BarterSystem() {
             className="img-fluid"
             alt="rightarc"
             direction="left"
-            style={{ width: "100%", height: "100%", objectFit: "contain" }}
+            style={{ height: "100%", width: "100%", objectFit: "contain" }}
           />
         </div>
+
         <div
           className="barright"
           ref={boxRef}
           style={{
             position: "absolute",
-            width: "35vw",
+            width: "42vw",
             height: "auto",
-            right: 0,
+            right: -20,
             bottom: 0,
             zIndex: 2,
           }}
@@ -142,12 +141,10 @@ export default function BarterSystem() {
             className="img-fluid"
             alt="rightarc"
             direction="left"
-            style={{ width: "80%", height: "100%", objectFit: "contain" }}
+            style={{ height: "100%", width: "100%", objectFit: "contain" }}
           />
         </div>
       </div>
     </div>
   );
 }
-
-

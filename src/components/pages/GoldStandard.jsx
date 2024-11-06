@@ -17,7 +17,7 @@ export default function GoldStandard() {
       const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
 
       if (isMobile) {
-        setHeight(width * 0.155); // For mobile screens
+        setHeight(width * 0.165); // For mobile screens
       } else {
         setHeight(width * 0.19); // For larger screens
       }
@@ -42,7 +42,7 @@ export default function GoldStandard() {
         <FadeImage
           text={
             <h1 className="head m-0 p-2">
-              GOLD <span className="tail" >STANDARD</span>
+              GOLD <span className="tail">STANDARD</span>
             </h1>
           }
           direction="up"
@@ -52,9 +52,8 @@ export default function GoldStandard() {
             <p className="particle m-0 p-0 ">
               The gold standard was a monetary system where a country's currency
               value was directly linked to a specific amount of gold.
-              Governments agreed to convert currency into gold at a
-              fixed rate, ensuring that paper money could be exchanged
-              for physical gold.
+              Governments agreed to convert currency into gold at a fixed rate,
+              ensuring that paper money could be exchanged for physical gold.
             </p>
           }
           direction="up"
@@ -70,6 +69,7 @@ export default function GoldStandard() {
         }}
       >
         <div
+          className="goldbeam"
           style={{
             position: "absolute",
             height: `${height}%`,
@@ -90,12 +90,12 @@ export default function GoldStandard() {
         </div>
 
         <div
-        className="goldman"
+          className="goldman"
           style={{
             position: "absolute",
             bottom: 0,
-            left:-30,
-            width: "37.9%",
+            left: -30,
+            width: "38.9%",
           }}
         >
           <FadeImage
@@ -108,6 +108,7 @@ export default function GoldStandard() {
         </div>
 
         <div
+          className="goldbeam"
           style={{
             zIndex: 1,
             position: "absolute",
@@ -126,13 +127,13 @@ export default function GoldStandard() {
           />
         </div>
         <div
-           className="goldrman"
+          className="goldrman"
           ref={boxRef}
           style={{
             zIndex: 2,
             position: "absolute",
             bottom: 0,
-            width: "35%",
+            width: "36vw",
             right: 0,
           }}
         >

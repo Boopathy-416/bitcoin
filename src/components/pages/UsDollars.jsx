@@ -17,9 +17,9 @@ function UsDollars() {
       const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
 
       if (isMobile) {
-        setHeight(width * 0.2); // For mobile screens
+        setHeight(width * 0.165); // For mobile screens
       } else {
-        setHeight(width * 0.17); // For larger screens
+        setHeight(width * 0.18); // For larger screens
       }
     };
 
@@ -49,13 +49,12 @@ function UsDollars() {
         <FadeImage
           text={
             <p className="particle m-0 p-1">
-              The U.S. dollar became the global standard after World
-              War II where most currencies were pegged to the dollar,
-              which was convertible to gold. This made the U.S. dollar
-              the world's reserve currency, providing stability in
-              international trade. The gold convertibility was ended in
-              1971, but the dollar remained the dominant global
-              currency.
+              The U.S. dollar became the global standard after World War II
+              where most currencies were pegged to the dollar, which was
+              convertible to gold. This made the U.S. dollar the world's reserve
+              currency, providing stability in international trade. The gold
+              convertibility was ended in 1971, but the dollar remained the
+              dominant global currency.
             </p>
           }
           direction="up"
@@ -70,14 +69,15 @@ function UsDollars() {
         }}
       >
         <div
+          className="usbeam"
           style={{
             position: "absolute",
             height: `${height}%`,
             width: "auto",
-            left: -10,
+            left: 0,
             display: "flex",
             float: "left",
-            bottom: 0,
+            bottom: -10,
           }}
         >
           <FadeImage
@@ -89,11 +89,12 @@ function UsDollars() {
           />
         </div>
         <div
-        className="usleft"
+          className="usleft"
           style={{
             position: "absolute",
+            height: "auto",
             width: "39.7%",
-            left:-20,
+            left: -20,
             bottom: 0,
           }}
         >
@@ -107,6 +108,7 @@ function UsDollars() {
         </div>
 
         <div
+          className="usbeam"
           style={{
             zIndex: 1,
             position: "absolute",
@@ -126,12 +128,13 @@ function UsDollars() {
         </div>
 
         <div
-        className="usright"
+          className="usright"
           ref={boxRef}
           style={{
             zIndex: 2,
             position: "absolute",
-            width: "35%",
+            width: "36vw",
+            height: "auto",
             right: 0,
             bottom: 0,
           }}

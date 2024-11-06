@@ -17,7 +17,7 @@ function PaperMoney() {
       const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
 
       if (isMobile) {
-        setHeight(width * 0.2); // For mobile screens
+        setHeight(width * 0.17); // For mobile screens
       } else {
         setHeight(width * 0.18); // For larger screens
       }
@@ -49,14 +49,12 @@ function PaperMoney() {
         />
         <FadeImage
           text={
-            <p className="particle m-0 p-0" style={{textAlign:"center"}}>
+            <p className="particle m-0 p-0" style={{ textAlign: "center" }}>
               The concept of representative money emerged during the Tang
-              Dynasty (618-907 CE),when the kingdom and merchants
-              began 
-              issuing paper notes that represented a claim on a specific amount
-               of precious metal or goods held in reserve.These early
-              banknotes were among the first widely used forms of
-              representative money.
+              Dynasty (618-907 CE),when the kingdom and merchants began issuing
+              paper notes that represented a claim on a specific amount of
+              precious metal or goods held in reserve.These early banknotes were
+              among the first widely used forms of representative money.
             </p>
           }
           direction="up"
@@ -72,11 +70,12 @@ function PaperMoney() {
         }}
       >
         <div
+          className="paperbeam"
           style={{
             position: "absolute",
             height: `${height}%`,
             width: "auto",
-            left: 0,
+            left: -10,
             display: "flex",
             float: "left",
             bottom: 0,
@@ -91,11 +90,11 @@ function PaperMoney() {
           />
         </div>
         <div
-        className="popleft"
+          className="popleft"
           style={{
             position: "absolute",
             bottom: 0,
-            width: "38.2%",
+            width: "38.5%",
           }}
         >
           <FadeImage
@@ -103,18 +102,19 @@ function PaperMoney() {
             className="img-fluid"
             alt="leftman"
             direction="right"
-            style={{ width: "100%", objectFit: "contain" }}
+            style={{ width: "100%", height: "auto", objectFit: "contain" }}
           />
         </div>
 
         <div
+          className="paperbeam"
           style={{
             zIndex: 1,
             position: "absolute",
             height: `${height}%`,
             width: "auto",
             bottom: 0,
-            right: 0,
+            right: -5,
           }}
         >
           <FadeImage
@@ -127,13 +127,13 @@ function PaperMoney() {
         </div>
 
         <div
-            className="popright"
+          className="popright"
           ref={boxRef}
           style={{
             zIndex: 2,
             position: "absolute",
             bottom: 0,
-            width: "35%",
+            width: "36vw",
             right: 0,
           }}
         >

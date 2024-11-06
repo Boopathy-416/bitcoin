@@ -16,7 +16,7 @@ export default function Bitcoin() {
       const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
 
       if (isMobile) {
-        setHeight(width * 0.155); // For mobile screens
+        setHeight(width * 0.165); // For mobile screens
       } else {
         setHeight(width * 0.19); // For larger screens
       }
@@ -37,17 +37,19 @@ export default function Bitcoin() {
           text={<div className="year pt-4 ">2009</div>}
           direction="up"
         />
-        <FadeImage text={ <h1 className="head m-0 p-2">BITCOIN</h1>} direction="up" />
+        <FadeImage
+          text={<h1 className="head m-0 p-2">BITCOIN</h1>}
+          direction="up"
+        />
         <FadeImage
           text={
             <p className="particle m-0 p-0">
               Operating on a peer-to-peer network without the need for a central
-              authority or government, bitcoin emerged in 2009.
-              Using blockchain technology to securely record
-              transactions and control the creation of new units,
-              bitcoin is not backed by any physical asset or government, 
-              and its value is determined by supply, demand, and market
-              speculation.
+              authority or government, bitcoin emerged in 2009. Using blockchain
+              technology to securely record transactions and control the
+              creation of new units, bitcoin is not backed by any physical asset
+              or government, and its value is determined by supply, demand, and
+              market speculation.
             </p>
           }
           direction="up"
@@ -63,15 +65,16 @@ export default function Bitcoin() {
         }}
       >
         <div
+          className="bitbeam"
           style={{
             position: "absolute",
             height: `${height}dvh`,
             width: "auto",
-            left: -85,
+            left: -35,
             bottom: 0,
             display: "flex",
             float: "left",
-            opacity:1
+            opacity: 1,
           }}
         >
           <FadeImage
@@ -83,12 +86,12 @@ export default function Bitcoin() {
           />
         </div>
         <div
-        className="bitleft"
+          className="bitleft"
           style={{
             position: "absolute",
-            width: "35vw",
-            left:0,
-            height:"auto",
+            width: "36.5vw",
+            left: 0,
+            height: "auto",
             bottom: 0,
           }}
         >
@@ -102,14 +105,15 @@ export default function Bitcoin() {
         </div>
 
         <div
+          className="bitbeam"
           style={{
             zIndex: 1,
             position: "absolute",
             height: `${height}dvh`,
             width: "auto",
-            right: -60,
+            right: -30,
             bottom: 0,
-            opacity:1
+            opacity: 1,
           }}
         >
           <FadeImage
@@ -121,12 +125,12 @@ export default function Bitcoin() {
           />
         </div>
         <div
-        className="bitright"
+          className="bitright"
           ref={boxRef}
           style={{
             position: "absolute",
-            width: "35vw",
-            height:"auto",
+            width: "36vw",
+            height: "auto",
             right: 0,
             bottom: 0,
             zIndex: 2,

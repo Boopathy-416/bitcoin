@@ -5,14 +5,24 @@
   src: url("/public/assets/fonts/Fellix-Regular.ttf");
 }
 
-a{
-  font-family:Fellix;
-  letter-spacing: 1.0px;
+a {
+  font-family: Fellix;
+  letter-spacing: 1px;
 }
-
+.go {
+  z-index: 12;
+  font-family: Fellix;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  bottom: 20px;
+  text-align: center;
+  left: 47%;
+}
 form {
-  font-family: Exo ;
-  letter-spacing: 1.0px;
+  font-family: Exo;
+  letter-spacing: 1px;
 }
 .years {
   margin: 0px;
@@ -26,7 +36,7 @@ form {
 }
 
 .ok {
-  margin-top:0px;
+  margin-top: 0px;
   padding: 0px;
   font-family: "Odibee Sans";
   font-size: calc(100px - 50px);
@@ -60,8 +70,6 @@ form {
   font-size: calc(100px - 50px);
   text-transform: uppercase;
 }
-
-
 
 /* Responsive Styling */
 
@@ -106,4 +114,3 @@ form {
     font-size: calc(50px - 25px);
   }
 }
-

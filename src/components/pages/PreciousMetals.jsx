@@ -17,7 +17,7 @@ function PreciousMetals() {
       const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
 
       if (isMobile) {
-        setHeight(width * 0.2); // For mobile screens
+        setHeight(width * 0.16); // For mobile screens
       } else {
         setHeight(width * 0.18); // For larger screens
       }
@@ -51,9 +51,9 @@ function PreciousMetals() {
           text={
             <p className="particle m-0 p-0">
               The evolution of trade necessitated a more versatile and
-              universally accepted form of payment.  This led to the
-              emergence of currency, initially in the form of small, shiny
-              objects-bronze, silver, and gold.
+              universally accepted form of payment. This led to the emergence of
+              currency, initially in the form of small, shiny objects-bronze,
+              silver, and gold.
             </p>
           }
           direction="up"
@@ -68,12 +68,12 @@ function PreciousMetals() {
         }}
       >
         <div
-        className="prebeam"
+          className="prebeam"
           style={{
             position: "absolute",
             height: `${height}%`,
             width: "auto",
-            left: -80,
+            left: -70,
             display: "flex",
             float: "left",
             bottom: 0,
@@ -89,13 +89,14 @@ function PreciousMetals() {
         </div>
 
         <div
-        className="preman"
+          className="preman"
           style={{
             position: "absolute",
-            width: "37.5%",
+            width: "41.3vw",
+            height: "auto",
             bottom: 0,
-            left:-23,
-            opacity:1
+            left: -23,
+            opacity: 1,
           }}
         >
           <FadeImage
@@ -108,13 +109,13 @@ function PreciousMetals() {
         </div>
 
         <div
-         className="presbeam"
+          className="prebeam"
           style={{
             zIndex: 1,
             position: "absolute",
             height: `${height}%`,
             width: "auto",
-            right: -90,
+            right: -75,
             bottom: 0,
           }}
         >
@@ -127,13 +128,13 @@ function PreciousMetals() {
           />
         </div>
         <div
-        className="prerman"
+          className="prerman"
           ref={boxRef}
           style={{
             zIndex: 1,
             position: "absolute",
-            width: "35%",
-            right: 0,
+            width: "38vw",
+            right: -20,
             bottom: 0,
           }}
         >
@@ -142,7 +143,7 @@ function PreciousMetals() {
             className="img-fluid"
             alt="rightman"
             direction="left"
-            style={{  objectFit: "contain" }}
+            style={{ objectFit: "contain" }}
           />
         </div>
       </div>
