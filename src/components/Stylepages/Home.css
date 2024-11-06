@@ -69,9 +69,9 @@ tt {
 
 @media (max-width: 480px) {
 
-  .homelbeam{
+  /* .homelbeam{
     width: 30% !important;
-  }
+  } */
   .barbeam {
     width: 50% !important;
   }
@@ -110,31 +110,31 @@ tt {
     height: auto !important;
   }
   .barright {
-    width: 380px !important;
-    right: -175px !important;
+    width: 385px !important;
+    right: -170px !important;
     height: auto !important;
   }
 
   .comleft {
-    width: 420px !important;
-    left: -180px !important;
+    width: 430px !important;
+    left: -205px !important;
     height: auto !important;
   }
 
   .comright {
     width: 380px !important;
-    right: -180px !important;
+    right: -190px !important;
     height: auto !important;
   }
 
   .conleft {
     width: 420px !important;
-    left: -180px !important;
+    left: -200px !important;
     height: auto !important;
   }
   .conright {
     width: 375px !important;
-    right: -180px !important;
+    right: -200px !important;
     height: auto !important;
   }
 
@@ -160,25 +160,25 @@ tt {
     height: 30vh !important;
   }
   .preman {
-    width: 100dvw !important;
-    left: -180px !important;
+    width: 420px !important;
+    left: -190px !important;
     height: auto !important;
     /* bottom: 10px !important; */
   }
   .prerman {
-    width: 95dvw !important;
+    width: 383px !important;
     height: auto !important;
-    right: -182px !important;
+    right: -200px !important;
   }
   .usleft {
     width: 424px !important;
     height: auto !important;
-    left: -190px !important;
+    left: -200px !important;
   }
   .usright {
     width: 380px !important;
     height: auto !important;
-    right: -180px !important;
+    right: -200px !important;
   }
 
   .bitleft {
@@ -202,11 +202,11 @@ tt {
 
   .goldman {
     width: 420px !important;
-    left: -180px !important;
+    left: -200px !important;
   }
   .goldrman {
     width: 380px !important;
-    right: -190px !important;
+    right: -200px !important;
   }
 
   .down {
@@ -221,11 +221,11 @@ tt {
   }
 
   .contact {
-    top: 18% !important;
+    top: 10% !important;
   }
 
   .go {
-    bottom: 80px !important;
+    bottom: 180px !important;
   }
 
   .i {

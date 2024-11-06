@@ -1,6 +1,7 @@
 import React from "react";
 import "../Stylepages/contact.css";
 import FadeImage from "../customise/FadeImage";
+import contact from "/public/assets/contactdown.webp"
 
 export default function ContactUs() {
   return (
@@ -53,7 +54,7 @@ export default function ContactUs() {
               direction="up"
             />
             <FadeImage
-              text={<p className=" mb-4">Coming soon to your city</p>}
+              text={<p className=" mb-4 uppercase">Coming soon to your city</p>}
               direction="up"
             />
 
@@ -114,7 +115,7 @@ export default function ContactUs() {
         >
           {" "}
           <FadeImage
-            src="/public/assets/contactdown.webp"
+            src={contact}
             className="img-fluid"
             alt="Responsive image"
             style={{ width: "100%", height: "100%", objectFit: "contain" }}

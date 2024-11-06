@@ -18,7 +18,7 @@ const Home = ({ goToSection, goToContact }) => {
       const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
 
       if (isMobile) {
-        setHeight(width * 0.05); // For mobile screens
+        setHeight(width * 0); // For mobile screens
       } else {
         setHeight(width * 0.07); // For larger screens
       }

@@ -1,5 +1,5 @@
 import React from "react";
-import load from "/public/assets/bitcoingif.gif";
+import load from "/public/assets/Frame 29.gif";
 
 const Preloader = () => {
   return (

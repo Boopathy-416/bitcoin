@@ -16,7 +16,7 @@ export default function BarterSystem() {
       const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
 
       if (isMobile) {
-        setHeight(width * 0.15); // For mobile screens
+        setHeight(width * 0.16); // For mobile screens
       } else {
         setHeight(width * 0.15); // For larger screens
       }

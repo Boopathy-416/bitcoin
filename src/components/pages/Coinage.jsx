@@ -17,7 +17,7 @@ export default function Coinage() {
       const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
 
       if (isMobile) {
-        setHeight(width * 0.2); // For mobile screens
+        setHeight(width * 0.16); // For mobile screens
       } else {
         setHeight(width * 0.18); // For larger screens
       }

@@ -74,7 +74,7 @@ function UsDollars() {
             position: "absolute",
             height: `${height}%`,
             width: "auto",
-            left: 0,
+            left: -8,
             display: "flex",
             float: "left",
             bottom: -10,

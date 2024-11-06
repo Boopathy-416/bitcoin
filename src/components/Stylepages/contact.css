@@ -11,6 +11,7 @@ a {
 }
 .go {
   z-index: 12;
+  text-transform: uppercase;
   font-family: Fellix;
   position: absolute;
   bottom: 20px; 

@@ -16,7 +16,7 @@ export default function Bitcoin() {
       const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
 
       if (isMobile) {
-        setHeight(width * 0.165); // For mobile screens
+        setHeight(width * 0.17); // For mobile screens
       } else {
         setHeight(width * 0.19); // For larger screens
       }
