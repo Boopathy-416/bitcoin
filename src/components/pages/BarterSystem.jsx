@@ -31,7 +31,7 @@ export default function BarterSystem() {
   }, []);
 
   return (
-    <div className="relative min-h-screen min-w-screen max-h-screen min-w-max m-0 p-0 text-white flex flex-col">
+    <div className="relative min-h-screen min-w-screen max-h-screen min-w-max m-0 p-0 text-white flex flex-col select-none">
       <main className="absolute flex-grow flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center w-full ">
         <FadeImage
           text={<div className="year pt-2">c.670 BCE</div>}

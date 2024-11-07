@@ -32,7 +32,7 @@ function PreciousMetals() {
   }, []);
 
   return (
-    <div className="relative min-h-screen min-w-screen max-h-screen min-w-max  text-white flex flex-col">
+    <div className="relative min-h-screen min-w-screen max-h-screen min-w-max  text-white flex flex-col select-none">
       <main className=" p-4 absolute w-full flex-grow flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center">
         <FadeImage
           text={<div className="year pt-2">C.3,000 BCE</div>}

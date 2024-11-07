@@ -31,7 +31,7 @@ export default function CommodityMoney() {
   }, []);
 
   return (
-    <div className="relative min-h-screen min-w-screen max-h-screen min-w-max text-white flex flex-col">
+    <div className="relative min-h-screen min-w-screen max-h-screen min-w-max text-white flex flex-col select-none">
       <main className=" w-full absolute p-4 flex-grow  flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center">
         <FadeImage
           text={<div className="year pt-2">c.5,500 BCE</div>}

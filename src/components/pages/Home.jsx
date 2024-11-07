@@ -62,7 +62,7 @@ const Home = ({ goToSection, goToContact }) => {
   };
 
   return (
-    <div className="relative min-h-screen min-w-screen max-h-screen flex flex-col">
+    <div className="relative min-h-screen min-w-screen max-h-screen flex flex-col select-none">
       <header className="p-4 flex justify-between items-center z-1">
         <h2 className="font-bold text-white sm:text-xl  ">THEBITCOIN.COM</h2>
 
