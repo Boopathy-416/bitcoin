@@ -103,14 +103,15 @@ form {
 
 @media (max-width: 480px) {
   .years {
-    font-size: 18px;
+    font-size: 38px;
+    padding: 5px;
   }
 
   .ok {
-    font-size: calc(50px - 25px);
+    font-size: calc(70px - 25px);
   }
 
   .tails {
-    font-size: calc(50px - 25px);
+    font-size: calc(70px - 25px);
   }
 }

@@ -38,7 +38,7 @@ export default function Bitcoin() {
           direction="up"
         />
         <FadeImage
-          text={<h1 className="head m-0 p-2">BITCOIN</h1>}
+          text={<h1 className="head m-0 p-2 ">BITCOIN</h1>}
           direction="up"
         />
         <FadeImage

@@ -74,10 +74,10 @@
 
 .year {
   font-family: "EXO", sans-serif;
-  font-size: 32px;
+  font-size: 2.5em;
   font-style: normal;
   font-weight: 100;
-  line-height: 38.4px;
+  line-height: 25.4px;
   letter-spacing: 0.96px;
   margin: 0px;
   padding: 0px;
@@ -106,12 +106,12 @@
 @media (max-width: 768px) {
   .head,
   .tail {
-    font-size: 36px;
+    font-size: 40px;
     line-height: 40px;
   }
 
   .particle {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .year,
@@ -123,7 +123,7 @@
 @media (max-width: 480px) {
   .head,
   .tail {
-    font-size: 36px;
+    font-size: 52px;
   }
 
   .particle,
@@ -133,6 +133,6 @@
 
   .year,
   .years {
-    font-size: 18px;
+    font-size: 42px;
   }
 }
