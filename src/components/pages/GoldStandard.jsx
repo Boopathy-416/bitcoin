@@ -35,7 +35,7 @@ export default function GoldStandard() {
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max  text-white flex flex-col">
       <main className=" w-full absolute flex-grow flex flex-col items-center justify-center  p-4 sm:px-6 lg:px-8 text-center">
         <FadeImage
-          text={<div className="year  pt-4">C.1870 CE</div>}
+          text={<div className="year  pt-2">C.1870 CE</div>}
           direction="up"
         />
 

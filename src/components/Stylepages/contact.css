@@ -13,10 +13,8 @@ a {
   z-index: 12;
   text-transform: uppercase;
   font-family: Fellix;
-  position: absolute;
-  bottom: 20px; 
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+ top: 35px !important;
   text-align: center;
 }
 

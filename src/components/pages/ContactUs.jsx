@@ -95,6 +95,13 @@ export default function ContactUs() {
                       Submit
                     </button>
                   </div>
+                  <a
+          id="contact"
+          href="/"
+          class=" go text-sm text-orange-500 hover:text-blue-400 ml-1   "
+        >
+          Back to Home
+        </a>
                 </form>
               }
               direction="up"
@@ -122,13 +129,7 @@ export default function ContactUs() {
             direction="up"
           />
         </div>
-        <a
-          id="contact"
-          href="/"
-          class="go text-sm text-orange-500 hover:text-blue-400 ml-1   "
-        >
-          Back to Home
-        </a>
+    
       </div>
     </section>
   );

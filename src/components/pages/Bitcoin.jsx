@@ -34,7 +34,7 @@ export default function Bitcoin() {
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max text-white flex flex-col">
       <main className="p-4 flex-grow absolute flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center w-full ">
         <FadeImage
-          text={<div className="year pt-4 ">2009</div>}
+          text={<div className="year pt-2 ">2009</div>}
           direction="up"
         />
         <FadeImage

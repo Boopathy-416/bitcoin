@@ -35,7 +35,7 @@ function PaperMoney() {
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max  text-white flex flex-col">
       <main className="p-4 w-full absolute flex-grow flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center">
         <FadeImage
-          text={<div className="year pt-4">c.670 BCE</div>}
+          text={<div className="year pt-2">c.670 BCE</div>}
           direction="up"
         />
 
