@@ -29,6 +29,12 @@ export default function Bitcoin() {
       window.removeEventListener("resize", updateHeight);
     };
   }, []);
+  useEffect(() => {
+    const phrases = document.querySelectorAll(".phrase");
+    phrases.forEach((phrase, index) => {
+      phrase.style.animationDelay = `${index * 0.5}s`;
+    });
+  }, []);
 
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max text-white flex flex-col select-none">
@@ -43,13 +49,25 @@ export default function Bitcoin() {
         />
         <FadeImage
           text={
-            <p className="particle m-0 p-0">
-              Operating on a peer-to-peer network without the need for a central
-              authority or government, bitcoin emerged in 2009. Using blockchain
-              technology to securely record transactions and control the
-              creation of new units, bitcoin is not backed by any physical asset
-              or government, and its value is determined by supply, demand, and
-              market speculation.
+            <p className="particles m-0 p-0" style={{ textAlign: "center" }}>
+              <span className="">
+                Operating on a peer-to-peer network without the{" "}
+              </span>
+              <span className="">need for a central </span>
+              <span className="">authority or government, </span>
+              <span className="phrase">bitcoin emerged in 2009. </span>
+              <span className="phrase">Using blockchain </span>
+              <span className="phrase">technology to securely </span>
+              <span className="phrase">record transactions </span>
+              <span className="phrase">and control the </span>
+              <span className="phrase">creation of new units, </span>
+              <span className="phrase">by any physical asset </span>
+              <span className="phrase">or government, </span>
+              <span className="phrase">and its value is </span>
+              <span className="phrase">determined by supply, </span>
+              <span className="phrase">demand, and </span>
+              <span className="phrase">market speculation. </span>
+             
             </p>
           }
           direction="up"

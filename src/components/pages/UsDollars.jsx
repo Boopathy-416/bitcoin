@@ -30,6 +30,13 @@ function UsDollars() {
       window.removeEventListener("resize", updateHeight);
     };
   }, []);
+  useEffect(() => {
+   
+    const phrases = document.querySelectorAll(".phrase");
+    phrases.forEach((phrase, index) => {
+      phrase.style.animationDelay = `${index * 0.5}s`; 
+    });
+  }, []);
 
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max  text-white flex flex-col select-none">
@@ -48,13 +55,26 @@ function UsDollars() {
         />
         <FadeImage
           text={
-            <p className="particle m-0 p-1">
-              The U.S. dollar became the global standard after World War II
-              where most currencies were pegged to the dollar, which was
-              convertible to gold. This made the U.S. dollar the world's reserve
-              currency, providing stability in international trade. The gold
-              convertibility was ended in 1971, but the dollar remained the
-              dominant global currency.
+            <p className="particles m-0 p-1">
+              <span className="">
+                The U.S. dollar became the global standard after World War II
+              </span>
+              <span className="">where most currencies </span>
+              <span className="">were pegged to the </span>
+              <span className="phrase">dollar, which was </span>
+              <span className="phrase">convertible to gold. </span>
+              <span className="phrase">This made the U.S. </span>
+              <span className="phrase">dollar the world's </span>
+              <span className="phrase">reserve </span>
+              <span className="phrase">currency, providing </span>
+              <span className="phrase">stability in </span>
+              <span className="phrase">international trade. </span>
+              <span className="phrase">The gold </span>
+              <span className="phrase">convertibility was </span>
+              <span className="phrase">ended in 1971, </span>
+              <span className="phrase">but the dollar </span>
+              <span className="phrase">remained the </span>
+              <span className="phrase">dominant global currency.</span>
             </p>
           }
           direction="up"

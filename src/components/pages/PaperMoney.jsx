@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import FadeImage from "../customise/FadeImage";
+import "../Stylepages/common.css";
 
 // Importing images
 import paperMoneyLFT from "/public/assets/papermonneyLFT.webp";
@@ -31,6 +32,14 @@ function PaperMoney() {
     };
   }, []);
 
+  useEffect(() => {
+   
+    const phrases = document.querySelectorAll(".phrase");
+    phrases.forEach((phrase, index) => {
+      phrase.style.animationDelay = `${index * 0.5}s`; 
+    });
+  }, []);
+
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max  text-white flex flex-col select-none">
       <main className="p-4 w-full absolute flex-grow flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center">
@@ -49,12 +58,24 @@ function PaperMoney() {
         />
         <FadeImage
           text={
-            <p className="particle m-0 p-0" style={{ textAlign: "center" }}>
-              The concept of representative money emerged during the Tang
-              Dynasty (618-907 CE),when the kingdom and merchants began issuing
-              paper notes that represented a claim on a specific amount of
-              precious metal or goods held in reserve.These early banknotes were
-              among the first widely used forms of representative money.
+             <p className="particles m-0 p-0 " style={{ textAlign: "center" }}>
+          
+              <span className="">
+                The concept of representative money emerged during the Tang
+              </span>
+              <span className="phrase">
+                Dynasty (618-907 CE), when the kingdom and merchants began
+              </span>
+              <span className="phrase">
+                issuing paper notes that represented a claim on a specific
+              </span>
+              <span className="phrase">
+                amount of precious metal or goods held in reserve. These early
+              </span>
+              <span className="phrase">
+                banknotes were among the first widely used forms of
+              </span>
+              <span className="phrase"> representative money.</span>
             </p>
           }
           direction="up"

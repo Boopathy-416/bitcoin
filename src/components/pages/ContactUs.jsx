@@ -1,120 +1,17 @@
-/*import React, { useState } from "react";
-import axios from "axios";
-import "../Stylepages/contact.css";
-import FadeImage from "../customise/FadeImage";
-import contact from "/public/assets/contactdown.webp";
-
-export default function ContactUs() {
-  const [formData, setFormData] = useState({ name: "", email: "", location: "" });
-  const [message, setMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const [modalMessage, setModalMessage] = useState("");
-  const [modalType, setModalType] = useState(""); 
-
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [id]: value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setMessage("");
-
-    try {
-      const response = await axios.post("https://bitcoinstore-be.onrender.com/register", formData);
-
-      if (response.status === 200) {
-        setMessage("Thank you for registering!");
-        setModalMessage("User registered successfully!");
-        setModalType("success");
-      }
-    } catch (error) {
-      console.error("Error submitting form: ", error);
-      if (error.response && error.response.data) {
-        setModalMessage(error.response.data.message || "An error occurred. Please try again.");
-      } else {
-        setModalMessage("Something went wrong.");
-      }
-      setModalType("error");
-    }
-
-    setIsLoading(false);
-    setShowModal(true); 
-  };
-
-  return (
-    <section id="contact" className="relative min-h-screen min-w-screen max-h-screen min-w-max flex flex-col">
-      <header className="p-4 flex justify-between items-center">
-        <h2 className="text-2xl font-bold text-white">THEBITCOIN.COM</h2>
-        <a href="/" className="hidden sm:inline-block text-white">
-          Contact Us
-        </a>
-        <a href="/" className="sm:hidden z-3">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6 text-white">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-        </a>
-      </header>
-
-      <div className="flex-grow absolute z-3 contact flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center justify-center w-full">
-        <div className="text-base sm:text-lg lg:text-xl max-w-xl sm:max-w-1xl mb-8 sm:mb-12">
-          <p className="years text-white pt-2 mt-5">2020</p>
-          <FadeImage text={<h3 className="ok mt-5 ">THE<a className="tails">BITCOIN</a>.COM</h3>} direction="up" />
-          <FadeImage text={<p className="mb-4 uppercase">Coming soon to your city</p>} direction="up" />
-
-          <FadeImage component={
-            <form onSubmit={handleSubmit}>
-              <div className="relative flex items-center">
-                <input type="text" id="name" value={formData.name} onChange={handleChange} required placeholder="Enter your Name" className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-full focus:outline-none" />
-              </div>
-              <div className="relative mt-6 flex items-center">
-                <input type="email" id="email" value={formData.email} onChange={handleChange} required placeholder="Enter your Email" className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-full focus:outline-none" />
-              </div>
-              <div className="relative mt-6 flex items-center">
-                <input type="text" id="location" value={formData.location} onChange={handleChange} required placeholder="Enter your Location" className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-full focus:outline-none" />
-              </div>
-              <div className="flex justify-center mt-8">
-                <button type="submit" className="w-full py-2 bg-dark text-white font-bold rounded-full hover:bg-gray-300 focus:outline-none" disabled={isLoading}>
-                  {isLoading ? "Submitting..." : "Submit"}
-                </button>
-              </div>
-              <a
-                    id="contact"
-                    href="/"
-                    className="go text-sm text-orange-500 hover:text-blue-400 ml-1"
-                  >
-                    Back to Home
-                  </a>
-            </form>
-          } direction="up" />
-        </div>
-      </div>
-
-      <div className="down" style={{ position: "absolute", height: "auto", width: "auto", bottom: 0, zIndex: 2, opacity: 0.6 }}>
-        <FadeImage src={contact} className="img-fluid" alt="Responsive image" style={{ width: "100%", height: "100%", objectFit: "contain" }} direction="up" />
-      </div>
-
-      {showModal && (
-        <div className={`fixed top-10 right-2 m-4 p-6 rounded-sm shadow-lg transition-all duration-500 ease-in-out ${modalType === "success" ? "bg-green-500" : "bg-red-500"}`} style={{ zIndex: -999 }}>
-          <p className="text-white text-sm font-semibold">{modalMessage}</p>
-        </div>
-      )}
-    </section>
-  );
-}*/
-
 
 import React, { useState } from "react";
 import axios from "axios";
 import "../Stylepages/contact.css";
 import FadeImage from "../customise/FadeImage";
 import contact from "/public/assets/contactdown.webp";
-import done from "/public/assets/done.png"
+
 
 export default function ContactUs() {
-  const [formData, setFormData] = useState({ name: "", email: "", location: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    location: "",
+  });
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -133,18 +30,23 @@ export default function ContactUs() {
     setMessage(""); // Reset the message on new submit
 
     try {
-      const response = await axios.post("https://bitcoinstore-be.onrender.com/register", formData);
+      const response = await axios.post(
+        "https://bitcoinstore-be.onrender.com/register",
+        formData
+      );
 
-      if (response.status === 200) {
+      if (response.status === 201) {
         setMessage("Thank you for registering!");
         setModalMessage("User registered successfully!");
         setModalType("success");
         setShowGif(true); // Show the GIF after successful registration
       }
     } catch (error) {
-      console.error("Error submitting form: ", error);
+      console.error("Error submitting form: ", error.response.data);
       if (error.response && error.response.data) {
-        setModalMessage(error.response.data.message || "An error occurred. Please try again.");
+        setModalMessage(
+          error.response.data.message || "An error occurred. Please try again."
+        );
       } else {
         setModalMessage("Something went wrong.");
       }
@@ -155,71 +57,146 @@ export default function ContactUs() {
     setShowModal(true); // Show the modal
     setTimeout(() => {
       setShowModal(false); // Hide the modal after 3 seconds
-    }, 3000); // Adjust the timeout duration as needed
+    }, 5000); // Adjust the timeout duration as needed
   };
 
   return (
-    <section id="contact" className="relative min-h-screen min-w-screen max-h-screen min-w-max flex flex-col">
-    <header className="p-4 flex justify-between items-center">
-      <h2 className="text-2xl font-bold text-white">THEBITCOIN.COM</h2>
-      <a href="/" className="hidden sm:inline-block text-white">
-        Contact Us
-      </a>
-      <a href="/" className="sm:hidden z-3">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6 text-white">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </a>
-    </header>
+    <section
+      id="contact"
+      className="relative min-h-screen min-w-screen max-h-screen min-w-max flex flex-col"
+    >
+      <header className="p-4 flex justify-between items-center">
+        <h2 className="text-2xl font-bold text-white">THEBITCOIN.COM</h2>
+        <a href="/" className="hidden sm:inline-block text-white">
+          Contact Us
+        </a>
+        <a href="/" className="sm:hidden z-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="2"
+            stroke="currentColor"
+            className="w-6 h-6 text-white"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </a>
+      </header>
 
-    <div className="flex-grow absolute z-3 contact flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center justify-center w-full">
-      <div className="text-base sm:text-lg lg:text-xl max-w-xl sm:max-w-1xl mb-8 sm:mb-12">
-        <p className="years text-white pt-2 mt-5">2020</p>
-        <FadeImage text={<h3 className="ok mt-5 ">THE<a className="tails">BITCOIN</a>.COM</h3>} direction="up" />
-        <FadeImage text={<p className="mb-4 uppercase">Coming soon to your city</p>} direction="up" />
+      <div className="flex-grow absolute z-3 contact flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center justify-center w-full select-none">
+        <div className="text-base sm:text-lg lg:text-xl max-w-xl sm:max-w-1xl mb-8 sm:mb-12  ">
+          <p className="years text-white pt-2 mt-5">2020</p>
+          <FadeImage
+            text={
+              <h3 className="ok mt-5 ">
+                THE<a className="tails">BITCOIN</a>.COM
+              </h3>
+            }
+            direction="up"
+          />
+          <FadeImage
+            text={
+              <p className="mb-4  text-sm  uppercase">
+                Coming soon to your city
+              </p>
+            }
+            direction="up"
+          />
 
-        <FadeImage component={
-          <form onSubmit={handleSubmit}>
-            <div className="relative flex items-center">
-              <input type="text" id="name" value={formData.name} onChange={handleChange} required placeholder="Enter your Name" className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-full focus:outline-none" />
-            </div>
-            <div className="relative mt-6 flex items-center">
-              <input type="email" id="email" value={formData.email} onChange={handleChange} required placeholder="Enter your Email" className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-full focus:outline-none" />
-            </div>
-            <div className="relative mt-6 flex items-center">
-              <input type="text" id="location" value={formData.location} onChange={handleChange} required placeholder="Enter your Location" className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-full focus:outline-none" />
-            </div>
-            <div className="flex justify-center mt-8">
-              <button type="submit" className="w-full py-2 bg-dark text-white font-bold rounded-full hover:bg-gray-300 focus:outline-none" disabled={isLoading}>
-                {isLoading ? "Submitting..." : "Submit"}
-              </button>
-            </div>
-            <a
+          <FadeImage
+            component={
+              <form onSubmit={handleSubmit}>
+                <div className="relative flex items-center">
+                  <input
+                    type="text"
+                    id="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    placeholder="Enter your Name"
+                    className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-full focus:outline-none"
+                  />
+                </div>
+                <div className="relative mt-6 flex items-center">
+                  <input
+                    type="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder="Enter your Email"
+                    className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-full focus:outline-none"
+                  />
+                </div>
+                <div className="relative mt-6 flex items-center">
+                  <input
+                    type="text"
+                    id="location"
+                    value={formData.location}
+                    onChange={handleChange}
+                    required
+                    placeholder="Enter your Location"
+                    className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-full focus:outline-none"
+                  />
+                </div>
+                <div className="flex justify-center mt-8">
+                  <button
+                    type="submit"
+                    className="w-full py-2 bg-dark text-white font-bold rounded-full hover:bg-gray-300 focus:outline-none"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Submitting..." : "Submit"}
+                  </button>
+                </div>
+                <a
                   id="contact"
                   href="/"
                   className="go text-sm text-orange-500 hover:text-blue-400 ml-1"
                 >
                   Back to Home
                 </a>
-          </form>
-          } direction="up" />
+              </form>
+            }
+            direction="up"
+          />
         </div>
       </div>
 
-      <div className="down" style={{ position: "absolute", height: "auto", width: "auto", bottom: 0, zIndex: 2, opacity: 0.6 }}>
-        <FadeImage src={contact} className="img-fluid" alt="Responsive image" style={{ width: "100%", height: "100%", objectFit: "contain" }} direction="up" />
+      <div
+        className="down"
+        style={{
+          position: "absolute",
+          height: "auto",
+          width: "auto",
+          bottom: 0,
+          zIndex: 2,
+          opacity: 0.6,
+        }}
+      >
+        <FadeImage
+          src={contact}
+          className="img-fluid"
+          alt="Responsive image"
+          style={{ width: "100%", height: "100%", objectFit: "contain" }}
+          direction="up"
+        />
       </div>
 
       {/* Modal/Notification */}
       {showModal && (
-        <div className={`fixed top-10 right-2 m-4 p-6 rounded-sm shadow-lg transition-all duration-500 ease-in-out ${modalType === "success" ? "bg-green-500" : "bg-red-500"}`} style={{ zIndex: 9999 }}>
+        <div
+          className={`fixed top-10 right-2 m-4 p-6 rounded-sm shadow-lg transition-all duration-500 ease-in-out ${
+            modalType === "success" ? "bg-green-500" : "#4c0519"
+          }`}
+          style={{ zIndex: 9999 }}
+        >
           <p className="text-white text-sm font-semibold">{modalMessage}</p>
-          {showGif && (
-            <div className="mt-4">
-              
-              <img src={done} alt="Success" className=" w-16 h-16 mx-auto" />
-            </div>
-          )}
+         
         </div>
       )}
     </section>

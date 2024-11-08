@@ -31,6 +31,13 @@ function PreciousMetals() {
     };
   }, []);
 
+  useEffect(() => {
+    const phrases = document.querySelectorAll(".phrase");
+    phrases.forEach((phrase, index) => {
+      phrase.style.animationDelay = `${index * 0.5}s`;
+    });
+  }, []);
+
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max  text-white flex flex-col select-none">
       <main className=" p-4 absolute w-full flex-grow flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center">
@@ -49,11 +56,21 @@ function PreciousMetals() {
         />
         <FadeImage
           text={
-            <p className="particle m-0 p-0">
-              The evolution of trade necessitated a more versatile and
-              universally accepted form of payment. This led to the emergence of
-              currency, initially in the form of small, shiny objects-bronze,
-              silver, and gold.
+            <p className="particles m-0 p-0">
+              <span className="">
+                The evolution of trade necessitated a more versatile and{" "}
+              </span>
+
+              <span className="">universally accepted </span>
+              <span className="phrase">form of payment. </span>
+              <span className="phrase">This led to the </span>
+              <span className="phrase">emergence of </span>
+              <span className="phrase">currency, </span>
+              <span className="phrase">initially in the </span>
+              <span className="phrase">form of small, </span>
+              <span className="phrase">shiny objects-bronze, </span>
+              <span className="phrase">silver,</span>
+              <span className="phrase"> and gold.</span>
             </p>
           }
           direction="up"

@@ -30,6 +30,13 @@ export default function GoldStandard() {
       window.removeEventListener("resize", updateHeight);
     };
   }, []);
+  useEffect(() => {
+   
+    const phrases = document.querySelectorAll(".phrase");
+    phrases.forEach((phrase, index) => {
+      phrase.style.animationDelay = `${index * 0.5}s`; 
+    });
+  }, []);
 
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max  text-white flex flex-col select-none">
@@ -49,11 +56,22 @@ export default function GoldStandard() {
         />
         <FadeImage
           text={
-            <p className="particle m-0 p-0 ">
-              The gold standard was a monetary system where a country's currency
-              value was directly linked to a specific amount of gold.
-              Governments agreed to convert currency into gold at a fixed rate,
-              ensuring that paper money could be exchanged for physical gold.
+            <p className="particles m-0 p-0 ">
+               <span className="">The gold standard was a monetary system where a </span>
+
+              <span className="">country's currency </span>
+              <span className="phrase">value was directly </span>
+              <span className="phrase">linked to a specific </span>
+              <span className="phrase">amount of gold. </span>
+              <span className="phrase">Governments agreed </span>
+              <span className="phrase">to convert currency </span>
+              <span className="phrase">into gold </span>
+              <span className="phrase">at a fixed rate, </span>
+              <span className="phrase">ensuring that </span>
+              <span className="phrase">paper money </span>
+              <span className="phrase">could be </span>
+              <span className="phrase">exchanged for </span>
+              <span className="phrase">physical gold.</span>
             </p>
           }
           direction="up"

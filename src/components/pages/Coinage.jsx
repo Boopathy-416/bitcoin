@@ -31,6 +31,13 @@ export default function Coinage() {
     };
   }, []);
 
+  useEffect(() => {
+    const phrases = document.querySelectorAll(".phrase");
+    phrases.forEach((phrase, index) => {
+      phrase.style.animationDelay = `${index * 0.5}s`;
+    });
+  }, []);
+
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max  text-white flex flex-col select-none">
       <main className=" w-full absolute flex-grow flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center">
@@ -46,11 +53,25 @@ export default function Coinage() {
 
         <FadeImage
           text={
-            <p className="particle m-0 p-0">
-              Ancient Lydians, by stamping a seal on a piece of metal started
-              the age of coins. This procedure did nothing to modify the
-              intrinsic value of the metal, but it simplified the exchange of
-              bullion for anyone willing to accept the stamp’s guarantee.
+            <p className="particles m-0 p-0">
+              <span className="">
+                Ancient Lydians, by stamping a seal on a piece of metal{" "}
+              </span>
+              <span className="">started</span>
+              <span className="">the age of coins. </span>
+              <span className="phrase">This procedure did </span>
+              <span className="phrase">nothing to modify the </span>
+              <span className="phrase">intrinsic value of the metal, </span>
+              <span className="phrase">but it simplified </span>
+              <span className="phrase">the exchange of </span>
+              <span className="phrase">bullion for </span>
+              <span className="phrase">anyone willing </span>
+              <span className="phrase">to accept the stamp’s </span>
+              <span className="phrase">guarantee. </span>
+              {/* <span className="phrase"></span>
+              <span className="phrase"></span>
+              <span className="phrase"></span>
+              <span className="phrase"></span> */}
             </p>
           }
           direction="up"

@@ -60,18 +60,28 @@ tt {
 }
 
 @media (max-width: 768px) {
-  p,
+  
   tt,
   b {
     font-size: 24px;
   }
+ 
 }
 
 @media (max-width: 480px) {
 
-  /* .homelbeam{
-    width: 30% !important;
-  } */
+  
+  tt,
+  b {
+    font-size: 22px;
+  }
+  .title{
+    font-size: 22px;
+    line-height: 2;
+    justify-content: center;
+    align-items: center;
+  }
+
   .barbeam {
     width: 50% !important;
   }

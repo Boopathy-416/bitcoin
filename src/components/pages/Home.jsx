@@ -61,6 +61,14 @@ const Home = ({ goToSection, goToContact }) => {
     goToContact(); 
   };
 
+  useEffect(() => {
+   
+    const phrases = document.querySelectorAll(".phrase");
+    phrases.forEach((phrase, index) => {
+      phrase.style.animationDelay = `${index * 1.5}s`; 
+    });
+  }, []);
+
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen flex flex-col select-none">
       <header className="p-4 flex justify-between items-center z-1">
@@ -96,7 +104,7 @@ const Home = ({ goToSection, goToContact }) => {
         <FadeImage
           text={
             <p className="title z-0 ">
-              <b>ROME</b> was Not Built in a day, But history can be made
+              <b >ROME</b> was Not Built in a day, But history can be made
               overnight. It took <b>11,000</b> years of trade before{" "}
               <tt>BITCOIN</tt> was invented. It took us just <tt>15 YEARS</tt>{" "}
               to embark on creating history.
@@ -105,7 +113,7 @@ const Home = ({ goToSection, goToContact }) => {
           direction="up"
         />
         <p
-          className="i z-3"
+          className="i z-3 phrase"
           onClick={handleClick}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -114,6 +122,7 @@ const Home = ({ goToSection, goToContact }) => {
           SCROLL
         </p>
         <img
+      
           src={buttonScroll}
           alt="scroll btn"
           // Trigger goToSection to move to BarterSystem

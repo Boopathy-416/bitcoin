@@ -30,6 +30,13 @@ export default function CommodityMoney() {
     };
   }, []);
 
+  useEffect(() => {
+    const phrases = document.querySelectorAll(".phrase");
+    phrases.forEach((phrase, index) => {
+      phrase.style.animationDelay = `${index * 0.5}s`;
+    });
+  }, []);
+
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max text-white flex flex-col select-none">
       <main className=" w-full absolute p-4 flex-grow  flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center">
@@ -48,11 +55,26 @@ export default function CommodityMoney() {
         />
         <FadeImage
           text={
-            <p className="particle m-0 p-0">
-              Commodity money developed when societies began using objects with
-              intrinsic value as currency.Ancient civilizations like the
-              Sumerians and Egyptians used items like grain, cattle, honey or
-              animal pelts.
+            <p className="particles m-0 p-0">
+              <span className="">Commodity money developed when societies began using objects with </span>
+
+              <span className="phrase">intrinsic value as </span>
+              <span className="phrase">currency. Ancient civilizations </span>
+              <span className="phrase">like the </span>
+              <span className="phrase">Sumerians and Egyptians </span>
+              <span className="phrase">used items like grain, </span>
+              <span className="phrase">cattle, </span>
+              <span className="phrase">honey or </span>
+              <span className="phrase">animal pelts.</span>
+              {/* <span className="phrase"></span>
+              <span className="phrase"></span>
+              <span className="phrase"></span>
+              <span className="phrase"></span>
+              <span className="phrase"></span>
+              */}
+               
+              
+             
             </p>
           }
           direction="up"

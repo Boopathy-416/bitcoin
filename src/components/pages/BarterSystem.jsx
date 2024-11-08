@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import "../Stylepages/BarterSystem.css";
+import "../Stylepages/common.css";
 import FadeImage from "../customise/FadeImage";
 import BPLEFT from "/public/assets/BPLEFT.webp";
 import BARTERLEFT from "/public/assets/BARTERLEFT.webp";
@@ -30,6 +31,13 @@ export default function BarterSystem() {
     };
   }, []);
 
+  useEffect(() => {
+    const phrases = document.querySelectorAll(".phrase");
+    phrases.forEach((phrase, index) => {
+      phrase.style.animationDelay = `${index * 0.5}s`;
+    });
+  }, []);
+
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max m-0 p-0 text-white flex flex-col select-none">
       <main className="absolute flex-grow flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center w-full ">
@@ -47,10 +55,16 @@ export default function BarterSystem() {
         />
         <FadeImage
           text={
-            <p className="particle m-0 p-0">
-              The earliest form of trade, ancient Mesopotamians and Egyptians
-              exchanged goods and services directly, such as trading livestock
-              for grains or labor for tools.
+            <p className="particles m-0 p-0" style={{ textAlign: "center" }}>
+              <span className="">The earliest form of trade,</span>
+              <span className=""> ancient Mesopotamians </span>
+              <span className="">and Egyptians </span>
+              <span className="phrase">exchanged goods </span>
+              <span className="phrase">and services directly, </span>
+              <span className="phrase">such as trading </span>
+              <span className="phrase">livestock </span>
+              <span className="phrase">for grains or </span>
+              <span className="phrase">labor for tools.</span>
             </p>
           }
           direction="up"

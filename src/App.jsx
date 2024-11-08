@@ -53,14 +53,14 @@ function App() {
       });
 
       Promise.all(promises).then(() => {
-        setIsLoaded(true); // Once all images are preloaded, set loaded to true
+        setIsLoaded(true); 
       });
     };
 
     loadImages();
   }, []);
 
-  // Scroll and touch handling
+
   useEffect(() => {
     const handleScroll = (e) => {
       const direction = e.deltaY > 0 ? 1 : -1;
@@ -100,7 +100,7 @@ function App() {
         }, 1000);
       }
 
-      setStartTouchY(null); // Reset touch start position after swipe is detected
+      setStartTouchY(null); 
     };
 
     window.addEventListener("wheel", handleScroll);
@@ -139,7 +139,7 @@ function App() {
           </div>
 
           <div
-            className={`fixed inset-0 bg-black transition-opacity duration-1000 ${
+            className={`relative inset-0 bg-black transition-opacity duration-1000 ${
               isTransitioning ? "opacity-100" : "opacity-0"
             }`}
           ></div>
