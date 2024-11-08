@@ -68,11 +68,11 @@
     }
   .particles {
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.2;
   }
   .phrase {
-    font-size: 18px;
+    font-size: 16px;
     animation-duration: 2s;
   }
 }
@@ -80,7 +80,7 @@
 @media (max-width: 480px) {
   .particles {
     text-align: center;
-    font-size: 15px;
+    font-size: 18px !important;
     line-height: 1;
     margin: 15px auto;
     width: 100%;
@@ -88,7 +88,7 @@
   }
 
   .phrase {
-    font-size: 14px;
+    font-size: 18px !important;
     line-height: 1;
     margin: 15px auto;
     animation-duration: 2s;

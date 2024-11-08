@@ -37,8 +37,41 @@ export default function CommodityMoney() {
     });
   }, []);
 
+    // fucntion to contact Us
+    const gocontact = () => {
+      goToContact(); 
+    };
+
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max text-white flex flex-col select-none">
+      <header className="p-4 flex justify-between items-center z-1">
+        <h2 className="font-bold text-white sm:text-xl  ">THEBITCOIN.COM</h2>
+
+        <a
+          onClick={gocontact}
+          className="hidden sm:inline-block font-bold z-1 text-white cursor-pointer"
+        >
+          Contact Us
+        </a>
+
+        <a className="sm:hidden ">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="2"
+            stroke="currentColor"
+            className="w-6 h-6  z-1 text-white cursor-pointer"
+            onClick={gocontact}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </a>
+      </header>
       <main className=" w-full absolute p-4 flex-grow  flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center">
         <FadeImage
           text={<div className="year pt-2">c.5,500 BCE</div>}

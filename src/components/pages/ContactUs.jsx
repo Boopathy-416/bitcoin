@@ -90,7 +90,7 @@ export default function ContactUs() {
 
       <div className="flex-grow absolute z-3 contact flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center justify-center w-full select-none">
         <div className="text-base sm:text-lg lg:text-xl max-w-xl sm:max-w-1xl mb-8 sm:mb-12  ">
-          <p className="years text-white pt-2 mt-5">2020</p>
+          <p className="years text-white pt-2 mt-5">2025</p>
           <FadeImage
             text={
               <h3 className="ok mt-5 ">
@@ -119,7 +119,7 @@ export default function ContactUs() {
                     onChange={handleChange}
                     required
                     placeholder="Enter your Name"
-                    className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-full focus:outline-none"
+                    className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-1 rounded-1 focus:outline-none"
                   />
                 </div>
                 <div className="relative mt-6 flex items-center">
@@ -130,7 +130,7 @@ export default function ContactUs() {
                     onChange={handleChange}
                     required
                     placeholder="Enter your Email"
-                    className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-full focus:outline-none"
+                    className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-1 focus:outline-none"
                   />
                 </div>
                 <div className="relative mt-6 flex items-center">
@@ -141,13 +141,13 @@ export default function ContactUs() {
                     onChange={handleChange}
                     required
                     placeholder="Enter your Location"
-                    className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-full focus:outline-none"
+                    className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-1 focus:outline-none"
                   />
                 </div>
-                <div className="flex justify-center mt-8">
+                <div className="flex justify-center mt-8" style={{fontSize:"16px"}}>
                   <button
                     type="submit"
-                    className="w-full py-2 bg-dark text-white font-bold rounded-full hover:bg-gray-300 focus:outline-none"
+                    className="w-full py-2 bg-black text-white  font-semibold uppercase rounded-1 hover:bg-blue-700 focus:outline-none"
                     disabled={isLoading}
                   >
                     {isLoading ? "Submitting..." : "Submit"}
