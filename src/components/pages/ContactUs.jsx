@@ -32,6 +32,7 @@ export default function ContactUs() {
         "http://ec2-54-84-228-107.compute-1.amazonaws.com:8080/register",
         formData
       );
+
       if (response.status === 201) {
         setMessage("Thank you for registering!");
         setModalMessage("User registered successfully!");
