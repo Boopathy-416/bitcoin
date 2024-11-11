@@ -1,10 +1,8 @@
-
 import React, { useState } from "react";
 import axios from "axios";
 import "../Stylepages/contact.css";
 import FadeImage from "../customise/FadeImage";
 import contact from "/public/assets/contactdown.webp";
-
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -27,11 +25,11 @@ export default function ContactUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setMessage(""); // Reset the message on new submit
+    setMessage("");
 
     try {
       const response = await axios.post(
-        "https://bitcoinstore-be.onrender.com/register",
+        "http://ec2-54-84-228-107.compute-1.amazonaws.com:8080/register",
         formData
       );
 
@@ -39,7 +37,7 @@ export default function ContactUs() {
         setMessage("Thank you for registering!");
         setModalMessage("User registered successfully!");
         setModalType("success");
-        setShowGif(true); // Show the GIF after successful registration
+        setShowGif(true);
       }
     } catch (error) {
       console.error("Error submitting form: ", error.response.data);
@@ -54,30 +52,32 @@ export default function ContactUs() {
     }
 
     setIsLoading(false);
-    setShowModal(true); // Show the modal
+    setShowModal(true);
     setTimeout(() => {
-      setShowModal(false); // Hide the modal after 3 seconds
-    }, 5000); // Adjust the timeout duration as needed
+      setShowModal(false);
+    }, 5000);
   };
 
   return (
     <section
-      id="contact"
+      id="#contact"
       className="relative min-h-screen min-w-screen max-h-screen min-w-max flex flex-col"
     >
-      <header className="p-4 flex justify-between items-center">
-        <h2 className="text-2xl font-bold text-white">THEBITCOIN.COM</h2>
+      <header className="p-4 flex justify-between items-center  z-1 ">
+        <h2 className="text-2xl font-bold text-white pointer " href="/">
+          THEBITCOIN.COM
+        </h2>
         <a href="/" className="hidden sm:inline-block text-white">
           Contact Us
         </a>
-        <a href="/" className="sm:hidden z-3">
+        <a href="/" className="sm:hidden  z-1  ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="2"
             stroke="currentColor"
-            className="w-6 h-6 text-white"
+            className="w-6 h-6  z-1  text-white"
           >
             <path
               strokeLinecap="round"
@@ -144,7 +144,10 @@ export default function ContactUs() {
                     className="w-full px-4 py-2 bg-transparent text-white placeholder-grey-700 border-0.01 rounded-1 focus:outline-none"
                   />
                 </div>
-                <div className="flex justify-center mt-8" style={{fontSize:"16px"}}>
+                <div
+                  className="flex justify-center mt-8"
+                  style={{ fontSize: "16px" }}
+                >
                   <button
                     type="submit"
                     className="w-full py-2 bg-black text-white  font-semibold uppercase rounded-1 hover:bg-blue-700 focus:outline-none"
@@ -191,12 +194,11 @@ export default function ContactUs() {
       {showModal && (
         <div
           className={`fixed top-10 right-2 m-4 p-6 rounded-sm shadow-lg transition-all duration-500 ease-in-out ${
-            modalType === "success" ? "bg-green-500" : "#4c0519"
+            modalType === "success" ? " " : " "
           }`}
           style={{ zIndex: 9999 }}
         >
           <p className="text-white text-sm font-semibold">{modalMessage}</p>
-         
         </div>
       )}
     </section>

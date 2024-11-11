@@ -1,26 +1,26 @@
 import React, { useRef, useState, useEffect } from "react";
 import FadeImage from "../customise/FadeImage";
 import "../Stylepages/common.css";
-
+import Navbar from "../Nabar";
 // Importing images
 import paperMoneyLFT from "/public/assets/papermonneyLFT.webp";
 import preciousLFTman from "/public/assets/preciousLFTman.webp";
 import paperMoneyRFT from "/public/assets/papermoneyRFT.webp";
 import paperMoneyRFTman from "/public/assets/papermoneyRFTman.webp";
 
-function PaperMoney() {
+function PaperMoney({ goToContact }) {
   const boxRef = useRef(null);
   const [height, setHeight] = useState(10);
 
   useEffect(() => {
     const updateHeight = () => {
       const width = boxRef.current.offsetWidth;
-      const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
       if (isMobile) {
-        setHeight(width * 0.16); // For mobile screens
+        setHeight(width * 0.16);
       } else {
-        setHeight(width * 0.18); // For larger screens
+        setHeight(width * 0.18);
       }
     };
 
@@ -32,49 +32,16 @@ function PaperMoney() {
     };
   }, []);
 
-   // fucntion to contact Us
-   const gocontact = () => {
-    goToContact(); 
-  };
-
   useEffect(() => {
-   
     const phrases = document.querySelectorAll(".phrase");
     phrases.forEach((phrase, index) => {
-      phrase.style.animationDelay = `${index * 0.5}s`; 
+      phrase.style.animationDelay = `${index * 0.5}s`;
     });
   }, []);
 
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max  text-white flex flex-col select-none">
-      <header className="p-4 flex justify-between items-center z-1">
-        <h2 className="font-bold text-white sm:text-xl  ">THEBITCOIN.COM</h2>
-
-        <a
-          onClick={gocontact}
-          className="hidden sm:inline-block font-bold z-1 text-white cursor-pointer"
-        >
-          Contact Us
-        </a>
-
-        <a className="sm:hidden ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="2"
-            stroke="currentColor"
-            className="w-6 h-6  z-1 text-white cursor-pointer"
-            onClick={gocontact}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </a>
-      </header>
+      <Navbar goToContact={goToContact} />
       <main className="p-4 w-full absolute flex-grow flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center">
         <FadeImage
           text={<div className="year pt-2">c.670 BCE</div>}
@@ -91,8 +58,7 @@ function PaperMoney() {
         />
         <FadeImage
           text={
-             <p className="particles m-0 p-0 " style={{ textAlign: "center" }}>
-          
+            <p className="particles m-0 p-0 " style={{ textAlign: "center" }}>
               <span className="">
                 The concept of representative money emerged during the Tang
               </span>

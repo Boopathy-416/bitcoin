@@ -1,25 +1,25 @@
 import React, { useRef, useState, useEffect } from "react";
 import FadeImage from "../customise/FadeImage";
-
+import Navbar from "../Nabar";
 // Importing images
 import preciousLFT from "/public/assets/preciousLFT.webp";
 import preciousLFTman from "/public/assets/preciousLFTman.webp";
 import preciousRFT from "/public/assets/preciousRFT.webp";
 import preciousRFTman from "/public/assets/preciousRFTman.webp";
 
-function PreciousMetals() {
+function PreciousMetals({ goToContact }) {
   const boxRef = useRef(null);
   const [height, setHeight] = useState(10);
 
   useEffect(() => {
     const updateHeight = () => {
       const width = boxRef.current.offsetWidth;
-      const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
       if (isMobile) {
-        setHeight(width * 0.16); // For mobile screens
+        setHeight(width * 0.16);
       } else {
-        setHeight(width * 0.18); // For larger screens
+        setHeight(width * 0.18);
       }
     };
 
@@ -37,41 +37,11 @@ function PreciousMetals() {
       phrase.style.animationDelay = `${index * 0.5}s`;
     });
   }, []);
- // fucntion to contact Us
- const gocontact = () => {
-  goToContact(); 
-};
 
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max  text-white flex flex-col select-none">
-      <header className="p-4 flex justify-between items-center z-1">
-        <h2 className="font-bold text-white sm:text-xl  ">THEBITCOIN.COM</h2>
+      <Navbar goToContact={goToContact} />
 
-        <a
-          onClick={gocontact}
-          className="hidden sm:inline-block font-bold z-1 text-white cursor-pointer"
-        >
-          Contact Us
-        </a>
-
-        <a className="sm:hidden ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="2"
-            stroke="currentColor"
-            className="w-6 h-6  z-1 text-white cursor-pointer"
-            onClick={gocontact}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </a>
-      </header>
       <main className=" p-4 absolute w-full flex-grow flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center">
         <FadeImage
           text={<div className="year pt-2">C.3,000 BCE</div>}

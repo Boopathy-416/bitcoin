@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import "../Stylepages/Home.css";
+import Navbar from "../Nabar.jsx";
 import FadeImage from "../customise/FadeImage";
 import leftArchHome from "/public/assets/leftarchome.webp";
 import homeDown from "/public/assets/homedown.webp";
@@ -10,17 +11,17 @@ const Home = ({ goToSection, goToContact }) => {
   const boxRef = useRef(null);
   const [height, setHeight] = useState(10);
   const [isHovered, setIsHovered] = useState(false);
-  const [isMobile, setIsMobile] = useState(false); // State to detect mobile view
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const updateHeight = () => {
       const width = boxRef.current.offsetWidth;
-      const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
       if (isMobile) {
-        setHeight(width * 0); // For mobile screens
+        setHeight(width * 0);
       } else {
-        setHeight(width * 0.07); // For larger screens
+        setHeight(width * 0.07);
       }
     };
 
@@ -32,7 +33,6 @@ const Home = ({ goToSection, goToContact }) => {
     };
   }, []);
 
-  // Function to handle mouse enter for hover (desktop)
   const handleMouseEnter = () => {
     if (!isMobile) {
       setIsHovered(true);
@@ -40,7 +40,6 @@ const Home = ({ goToSection, goToContact }) => {
     }
   };
 
-  // Function to handle mouse leave for hover (desktop)
   const handleMouseLeave = () => {
     if (!isMobile) {
       setIsHovered(false);
@@ -48,7 +47,6 @@ const Home = ({ goToSection, goToContact }) => {
     }
   };
 
-  // Function to handle click for mobile
   const handleClick = () => {
     if (isMobile) {
       goToSection();
@@ -56,55 +54,22 @@ const Home = ({ goToSection, goToContact }) => {
     goToSection();
   };
 
-  // fucntion to contact Us
-  const gocontact = () => {
-    goToContact(); 
-  };
-
   useEffect(() => {
-   
     const phrases = document.querySelectorAll(".phrase");
     phrases.forEach((phrase, index) => {
-      phrase.style.animationDelay = `${index * 1.5}s`; 
+      phrase.style.animationDelay = `${index * 1.5}s`;
     });
   }, []);
 
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen flex flex-col select-none">
-      <header className="p-4 flex justify-between items-center z-1">
-        <h2 className="font-bold text-white sm:text-xl  ">THEBITCOIN.COM</h2>
-
-        <a
-          onClick={gocontact}
-          className="hidden sm:inline-block font-bold z-1 text-white cursor-pointer"
-        >
-          Contact Us
-        </a>
-
-        <a className="sm:hidden ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="2"
-            stroke="currentColor"
-            className="w-6 h-6  z-1 text-white cursor-pointer"
-            onClick={gocontact}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </a>
-      </header>
+      <Navbar goToContact={goToContact} />
 
       <div className="flex-grow absolute flex flex-col items-center justify-center text-center w-full">
         <FadeImage
           text={
             <p className="title z-0 ">
-              <b >ROME</b> was Not Built in a day, But history can be made
+              <b>ROME</b> was Not Built in a day, But history can be made
               overnight. It took <b>11,000</b> years of trade before{" "}
               <tt>BITCOIN</tt> was invented. It took us just <tt>15 YEARS</tt>{" "}
               to embark on creating history.
@@ -122,10 +87,8 @@ const Home = ({ goToSection, goToContact }) => {
           SCROLL
         </p>
         <img
-      
           src={buttonScroll}
           alt="scroll btn"
-          // Trigger goToSection to move to BarterSystem
           style={{
             cursor: "pointer",
             width: "15px",
@@ -146,11 +109,10 @@ const Home = ({ goToSection, goToContact }) => {
           className="homebeam"
           style={{
             position: "absolute",
-            height: `${height}%`, // Dynamically set height
+            height: `${height}%`,
             width: "auto",
             left: 0,
             display: "flex",
-            opacity: 1,
             opacity: 0.6,
             bottom: -20,
           }}
@@ -167,7 +129,7 @@ const Home = ({ goToSection, goToContact }) => {
         <div
           className="downs"
           ref={boxRef}
-          style={{ position: "absolute", bottom: 0, zIndex: 2, width:"auto", }}
+          style={{ position: "absolute", bottom: 0, zIndex: 2, width: "auto" }}
         >
           <img
             src={homeDown}
@@ -177,12 +139,12 @@ const Home = ({ goToSection, goToContact }) => {
           />
         </div>
 
-         <div
-         className="homebeam"
+        <div
+          className="homebeam"
           style={{
             zIndex: 1,
             position: "absolute",
-            height: `${height}%`, // Dynamically set height
+            height: `${height}%`,
             width: "auto",
             right: 0,
             opacity: 0.6,
@@ -196,7 +158,7 @@ const Home = ({ goToSection, goToContact }) => {
             direction="left"
             style={{ width: "100%", height: "100%", objectFit: "contain" }}
           />
-        </div> 
+        </div>
       </div>
     </div>
   );

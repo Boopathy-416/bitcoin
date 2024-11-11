@@ -7,7 +7,6 @@
 
 .title {
   z-index: 999;
-  margin-top: 5px;
   font-family: Fellix;
   font-weight: 300;
   color: rgba(255, 255, 255);
@@ -60,24 +59,20 @@ tt {
 }
 
 @media (max-width: 768px) {
-  
   tt,
   b {
     font-size: 24px;
   }
- 
 }
 
 @media (max-width: 480px) {
-
-  
   tt,
   b {
     font-size: 22px;
   }
-  .title{
-    font-size: 22px;
-    line-height: 2;
+  .title {
+    font-size: 20px;
+    line-height: 1.5;
     justify-content: center;
     align-items: center;
   }
@@ -225,7 +220,7 @@ tt {
     left: -500px !important;
   }
 
-  .downs{
+  .downs {
     width: 1200px !important;
     height: auto;
   }

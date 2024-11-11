@@ -10,7 +10,6 @@ import GoldStandard from "./components/pages/GoldStandard";
 import UsDollars from "./components/pages/UsDollars";
 import Bitcoin from "./components/pages/Bitcoin";
 import ContactUs from "./components/pages/ContactUs";
-
 import Preloader from "./components/customise/Preloader";
 
 // Importing background image
@@ -28,15 +27,19 @@ function App() {
       goToSection={() => setCurrentSection(1)}
       goToContact={() => setCurrentSection(sections.length - 1)}
     />,
-    <BarterSystem />,
-    <CommodityMoney />,
-    <PreciousMetals />,
-    <Coinage />,
-    <PaperMoney />,
-    <GoldStandard />,
-    <UsDollars />,
-    <Bitcoin />,
-    <ContactUs />,
+    <BarterSystem goToContact={() => setCurrentSection(sections.length - 1)} />,
+    <CommodityMoney
+      goToContact={() => setCurrentSection(sections.length - 1)}
+    />,
+    <PreciousMetals
+      goToContact={() => setCurrentSection(sections.length - 1)}
+    />,
+    <Coinage goToContact={() => setCurrentSection(sections.length - 1)} />,
+    <PaperMoney goToContact={() => setCurrentSection(sections.length - 1)} />,
+    <GoldStandard goToContact={() => setCurrentSection(sections.length - 1)} />,
+    <UsDollars goToContact={() => setCurrentSection(sections.length - 1)} />,
+    <Bitcoin goToContact={() => setCurrentSection(sections.length - 1)} />,
+    <ContactUs goToContact={() => setCurrentSection(sections.length - 1)} />,
   ];
 
   // Preload all images and sections
@@ -53,13 +56,12 @@ function App() {
       });
 
       Promise.all(promises).then(() => {
-        setIsLoaded(true); 
+        setIsLoaded(true);
       });
     };
 
     loadImages();
   }, []);
-
 
   useEffect(() => {
     const handleScroll = (e) => {
@@ -100,7 +102,7 @@ function App() {
         }, 1000);
       }
 
-      setStartTouchY(null); 
+      setStartTouchY(null);
     };
 
     window.addEventListener("wheel", handleScroll);
@@ -120,8 +122,6 @@ function App() {
       {/* Show Preloader until images are loaded */}
       {isLoaded && (
         <>
-          {/* <customcursor /> */}
-
           <div
             style={{
               overflow: "hidden",

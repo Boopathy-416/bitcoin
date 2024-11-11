@@ -1,24 +1,24 @@
 import React, { useRef, useState, useEffect } from "react";
 import FadeImage from "../customise/FadeImage";
-
+import Navbar from "../Nabar";
 import commodityLFT from "/public/assets/commodityLFT.webp";
 import coinageLFTman from "/public/assets/coinageLFTman.webp";
 import commodityRFT from "/public/assets/commodityRFT.webp";
 import coinageRFTman from "/public/assets/coinageRFTman.webp";
 
-export default function CommodityMoney() {
+export default function CommodityMoney({ goToContact }) {
   const boxRef = useRef(null);
   const [height, setHeight] = useState(10);
 
   useEffect(() => {
     const updateHeight = () => {
       const width = boxRef.current.offsetWidth;
-      const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
       if (isMobile) {
-        setHeight(width * 0.165); // For mobile screens
+        setHeight(width * 0.165);
       } else {
-        setHeight(width * 0.18); // For larger screens
+        setHeight(width * 0.18);
       }
     };
 
@@ -37,41 +37,10 @@ export default function CommodityMoney() {
     });
   }, []);
 
-    // fucntion to contact Us
-    const gocontact = () => {
-      goToContact(); 
-    };
-
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max text-white flex flex-col select-none">
-      <header className="p-4 flex justify-between items-center z-1">
-        <h2 className="font-bold text-white sm:text-xl  ">THEBITCOIN.COM</h2>
+      <Navbar goToContact={goToContact} />
 
-        <a
-          onClick={gocontact}
-          className="hidden sm:inline-block font-bold z-1 text-white cursor-pointer"
-        >
-          Contact Us
-        </a>
-
-        <a className="sm:hidden ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="2"
-            stroke="currentColor"
-            className="w-6 h-6  z-1 text-white cursor-pointer"
-            onClick={gocontact}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </a>
-      </header>
       <main className=" w-full absolute p-4 flex-grow  flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center">
         <FadeImage
           text={<div className="year pt-2">c.5,500 BCE</div>}
@@ -89,8 +58,10 @@ export default function CommodityMoney() {
         <FadeImage
           text={
             <p className="particles m-0 p-0">
-              <span className="">Commodity money developed when societies began using objects with </span>
-
+              <span className="">
+                Commodity money developed when societies began using objects
+                with{" "}
+              </span>
               <span className="phrase">intrinsic value as </span>
               <span className="phrase">currency. Ancient civilizations </span>
               <span className="phrase">like the </span>
@@ -99,15 +70,6 @@ export default function CommodityMoney() {
               <span className="phrase">cattle, </span>
               <span className="phrase">honey or </span>
               <span className="phrase">animal pelts.</span>
-              {/* <span className="phrase"></span>
-              <span className="phrase"></span>
-              <span className="phrase"></span>
-              <span className="phrase"></span>
-              <span className="phrase"></span>
-              */}
-               
-              
-             
             </p>
           }
           direction="up"

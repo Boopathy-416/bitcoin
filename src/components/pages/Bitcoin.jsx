@@ -1,24 +1,24 @@
 import React, { useRef, useState, useEffect } from "react";
 import FadeImage from "../customise/FadeImage";
-
+import Navbar from "../Nabar";
 import bitcoinLeft from "/public/assets/bitcoinbeamLft.webp";
 import bitcoinLFTman from "/public/assets/Group 208.webp";
 import bitcoinRight from "/public/assets/bitcoinbeamrft.webp";
 import bitcoinRHSman from "/public/assets/Group 209.webp";
 
-export default function Bitcoin() {
+export default function Bitcoin({ goToContact }) {
   const boxRef = useRef(null);
   const [height, setHeight] = useState(10);
 
   useEffect(() => {
     const updateHeight = () => {
       const width = boxRef.current.offsetWidth;
-      const isMobile = window.matchMedia("(max-width: 768px)").matches; // Detect mobile screen size
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
       if (isMobile) {
-        setHeight(width * 0.17); // For mobile screens
+        setHeight(width * 0.17);
       } else {
-        setHeight(width * 0.19); // For larger screens
+        setHeight(width * 0.19);
       }
     };
 
@@ -36,41 +36,9 @@ export default function Bitcoin() {
     });
   }, []);
 
-    // fucntion to contact Us
-    const gocontact = () => {
-      goToContact(); 
-    };
-
   return (
     <div className="relative min-h-screen min-w-screen max-h-screen min-w-max text-white flex flex-col select-none">
-       <header className="p-4 flex justify-between items-center z-1">
-        <h2 className="font-bold text-white sm:text-xl  ">THEBITCOIN.COM</h2>
-
-        <a
-          onClick={gocontact}
-          className="hidden sm:inline-block font-bold z-1 text-white cursor-pointer"
-        >
-          Contact Us
-        </a>
-
-        <a className="sm:hidden ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="2"
-            stroke="currentColor"
-            className="w-6 h-6  z-1 text-white cursor-pointer"
-            onClick={gocontact}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </a>
-      </header>
+      <Navbar goToContact={goToContact} />
 
       <main className="p-4 flex-grow absolute flex flex-col items-center justify-center p-4 sm:px-6 lg:px-8 text-center w-full ">
         <FadeImage
@@ -101,7 +69,6 @@ export default function Bitcoin() {
               <span className="phrase">determined by supply, </span>
               <span className="phrase">demand, and </span>
               <span className="phrase">market speculation. </span>
-             
             </p>
           }
           direction="up"
