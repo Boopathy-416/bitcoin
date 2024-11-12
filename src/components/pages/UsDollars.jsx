@@ -6,7 +6,7 @@ import usdollarsLFTman from "/public/assets/usdollarsLFTman.webp";
 import usdollarsRFT from "/public/assets/usdollarsRFT.webp";
 import usdollarsRFTman from "/public/assets/usdollarsRFTman.webp";
 
-function UsDollars() {
+function UsDollars({ goToContact }) {
   const boxRef = useRef(null);
   const [height, setHeight] = useState(10);
 
